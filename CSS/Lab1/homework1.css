@@ -1,0 +1,16 @@
+.card {
+    display: inline-block;
+    box-shadow: 5px 10px 8px cadetblue;
+    width: 300px;
+    height: 450px;
+    border-radius: 5px;
+    margin: 5px;
+}
+img {
+    border-radius: 5px 5px 0 0 ;
+    width: 100%;
+}
+.container {
+    padding: 2px 16px;
+    text-align: center;
+}
