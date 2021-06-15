@@ -6,10 +6,13 @@
     margin: 5px;
     margin-top: 20px;
 }
+.img {
+    margin-bottom: -5px;
+}
 img {
     border-radius: 5px 5px 0 0 ;
     width: 100%;
-    margin-bottom: -5px;
+    /* margin-bottom: -5px; */
 }
 .container {
     padding: 2px 16px;
