@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,400;0,600;0,900;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
+body {
+    /* font-family: 'Prompt', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Chonburi', cursive;
+    color: black;
+}
+h1 {
+    font-weight: 200;
+    font-style: italic;
+}
+/* div {
+  border: 2px solid black;
+  /* width: 50vw;
+  height: 50vw; */
+  /* background: lime; */
+  /* font-size: 3vw; */
+/* }
+.under {
+  text-decoration: underline red;
+}
+
+.over {
+  text-decoration: wavy overline lime;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.plain {
+  text-decoration: none;
+}
+
+.underover {
+  text-decoration: dashed underline overline;
+}
+
+.thick {
+  text-decoration: solid underline purple 4px;
+}
+
+.blink {
+  text-decoration: blink;
+} */
