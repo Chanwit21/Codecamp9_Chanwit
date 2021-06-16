@@ -7,8 +7,9 @@
     margin-top: 20px;
     /* background-color: pink; */
 }
-.img {
-    margin-bottom: -5px;
+.card img {
+    /* margin-bottom: -5px; */
+    vertical-align: bottom;
 
 }
 img {
