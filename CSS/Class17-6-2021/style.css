@@ -1,0 +1,47 @@
+.box {
+    float:left;
+    width: 200px;
+    height: 150px;
+    background:red;
+    text-align:center;
+    margin: 1px;
+  }
+  .row {
+    /* border: 1px dashed black; */
+    /* overflow:hidden; */
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  } 
+  .logo {
+    float:left;
+    background:green;
+  }
+  nav {
+    float:right;
+    background:lightblue;
+  }
+  .maincontent {
+      float: left;
+      background-color: silver;
+      width: 70%;
+  }
+  .sidebar {
+      float: right;
+      background-color: salmon;
+      width: 30%;
+  }
+  .img1 {
+      background-color: green;
+      float: left;
+      width: 50%;
+      text-align: center;
+  }
+  .img2 {
+    background-color:goldenrod ;
+    float: left;
+    width: 50%;
+    text-align: center;
+  }

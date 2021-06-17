@@ -39,8 +39,6 @@ img {
 .body {
     background-image: url("./PIC/pexels-riciardus-307008.jpg");
     background-size: cover;
-    width: 100vw;
-    height: 50vh;
     text-align: center;
     padding: 200px 0 250px;
 }
