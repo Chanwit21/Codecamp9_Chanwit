@@ -100,8 +100,14 @@ body {
     width:360px;
     height: 50px;
     padding: 14px 16px;
+    border: 1px solid lightblue;
     border-radius: 10px;
     border-width: 0.3px;
+}
+
+.boxright input:focus {
+    outline: none;
+    border: 1px solid rgb(100, 100, 230);
 }
 
 .boxright a {
