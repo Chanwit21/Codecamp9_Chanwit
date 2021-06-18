@@ -17,14 +17,15 @@
 
 .boxright {
     border: 1px solid black;
-}*/
-
+} */
+s
 /* Global */
 * {
     margin: 0;
     padding: 0;
     font-family: Helvetica, Arial, sans-serif;
 }
+
 body {
     background: #edf0f5;;
 }
@@ -49,11 +50,10 @@ body {
     font-weight: 400;
 }
 
-.boxleft h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 60px;
-    font-weight: 900;
-    color: blue;
+.boxleft img {
+    margin-left: -30px;
+    text-align: left;
+    width: 300px;
 }
 
 /* boxright */
