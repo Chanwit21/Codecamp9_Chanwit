@@ -7,7 +7,7 @@ let a = undefined;
 let b = ' ';
 let c = !b;
 let d = Boolean(a);
-let e = Boolean(b);
+let e = !!b;
 let f = Boolean(c);
 console.log(d);     //false //flase Boolean ของค่าที่ไม่ได้ใส่จะมีค่าเป็น false
 console.log(e);     //false //true  Boolean ของค่าที่มี Spacebar เป็น True เพราะว่ามีตัวอักษรอยู่

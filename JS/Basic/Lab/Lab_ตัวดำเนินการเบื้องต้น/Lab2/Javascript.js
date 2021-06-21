@@ -7,8 +7,8 @@ let a = undefined;
 let b = null;
 let c = b + '4 2';
 let d = Number(a);
-let e = Number(b);
-let f = Number(c);
+let e = +b;
+let f = c*1;
 console.log(d);     // NaN มันพยายามแปลง undefined ให้เป็นตัวเลขเลยได้ค่า NaN
 console.log(e);     // 0 มันแปลงจากค่าว่างๆให้เป็น 0 
 console.log(f);     // c ได้เป็น 'null4 2' Number ของ String คือ NaN

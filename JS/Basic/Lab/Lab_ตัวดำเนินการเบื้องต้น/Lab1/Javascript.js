@@ -7,8 +7,8 @@ let a = undefined;
 let b = 2;
 let c = a++;
 let d = String(a);
-let e = String(b);
-let f = String(c);
+let e = "" + b;
+let f = `${c}`;
 console.log(d)      //ได้ NaN ก่อนลงมาที่บรรทัด let d = String(a); ได้เกิด a++ มันเจอ undefined++ เลยได้ NaN
 console.log(e)      //ได้ "2" เพราะมันนำคำว่า 2 ไปใส่ใน Qoute
 console.log(f)      //ได้ NaN เพราะว่า มันคือ undefined++
