@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Viaoda+Libre&display=swap');
+/* font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Viaoda Libre', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color:pink;
+    width: 100%;
+    height: 4.5vh;
+    padding:2px;
+}
+img {
+    height: 3.5vh;
+}
+.header a {
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: -2.5px 2px;
+    padding: 8px;
+    height: 5vh;
+    line-height: 3vh;
+    color: black;
+}
+.navright {
+    float: right;
+}
+.navright a:hover {
+    background-color: purple;
+    color: white;
+}
+.body {
+    background-image: url("./PIC/pexels-riciardus-307008.jpg");
+    background-size: cover;
+    text-align: center;
+    padding: 200px 0 250px;
+}
+.body p {
+    font-family: 'Lato', sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+p:last-of-type{
+    font-size: 40px;
+    font-weight: 400;
+}
+.body h1 {
+    font-family: 'Viaoda Libre', cursive; 
+    /* font-family: 'Open Sans', sans-serif; */
+    font-size: 230px;
+    text-align: center;
+    vertical-align: middle;
+}
+.body a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    line-height: 50px;
+    width: 150px;
+    height: 50px;
+    margin-top: 50px;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.body a:hover {
+    background-color: white;
+    color: black;
+}

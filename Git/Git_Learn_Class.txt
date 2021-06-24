@@ -1,0 +1,5 @@
+kernal ทำกับ Software 
+Shell ก็ครอบ kernel อีกที
+bond again Shell 
+Mac OS ต้องติดตั้ง Git ผ่าน Brew
+cd .. ขึ้นไป 1 ครั้ง

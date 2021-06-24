@@ -1,0 +1,26 @@
+.card {
+    display: inline-block;
+    width: 300px;
+    box-shadow: 5px 10px 8px cadetblue;
+    border-radius: 5px;
+    margin: 5px;
+    margin-top: 20px;
+    /* background-color: pink; */
+}
+.card img {
+    /* margin-bottom: -5px; */
+    vertical-align: bottom;
+
+}
+img {
+    border-radius: 5px 5px 0 0 ;
+    width: 100%;
+    /* margin-bottom: -5px; */
+}
+.container {
+    padding: 2px 16px;
+    text-align: center;
+    background-color: pink;
+    color: blue;
+    border-radius: 0 0 5px 5px;
+}

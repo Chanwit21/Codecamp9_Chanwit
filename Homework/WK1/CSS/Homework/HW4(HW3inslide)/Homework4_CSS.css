@@ -1,0 +1,217 @@
+/* temp */
+/* .firstsection {
+    border: 1px solid black;
+}
+
+.secoundsection {
+    border: 1px solid black;
+}
+
+.container {
+    border: 1px solid black;
+}
+
+.boxleft {
+    border: 1px solid black;
+} 
+
+.boxright {
+    border: 1px solid black;
+} */
+s
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: #edf0f5;;
+}
+
+.container {
+    text-align: center;
+    width:65%;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+/* boxlefe */
+.boxleft {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.boxleft p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.boxleft img {
+    margin-left: -30px;
+    margin-bottom: -50px;
+    text-align: left;
+    width: 300px;
+}
+
+/* boxright */
+.boxright {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    margin-top: 100px;
+}
+
+.boxright .formbox {
+    background-color: #fff;
+    box-shadow: 5px 5px 15px 3px rgba(160,160,160,0.3);
+    width: 400px;
+    height: 350px;
+    text-align: center;
+    padding-top: 3px;
+    margin: auto 10px auto auto;
+    border-radius: 10px;
+}
+
+.boxright .textunderform {
+    width: 400px;
+    text-align: center;
+    padding-top: 3px;
+    margin: 10px 0 auto auto;
+}
+
+.boxright .textunderform a {
+    display: inline;
+    color: black;
+}
+
+.boxright .textunderform a:hover {
+    text-decoration: underline;
+}
+
+
+.boxright input {
+    font-size: 19px;
+    box-sizing: border-box;
+    display: block;
+    margin: 10px auto;
+    width:360px;
+    height: 50px;
+    padding: 14px 16px;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    border-width: 0.3px;
+}
+
+.boxright input:focus {
+    outline: none;
+    border: 1px solid rgb(100, 100, 230);
+}
+
+.boxright a {
+    display: block;
+    text-decoration: none;
+    margin: 16px 0 16px 0;
+}
+
+.boxright .formbox > a:hover {
+    text-decoration: underline;
+}
+
+.boxright .register > a:hover {
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+}
+
+.boxright form {
+    margin-top: 30px;
+}
+
+.boxright button {
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #1877f2;
+    color: white;
+    width: 360px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+
+.boxright button:hover {
+    background-color: #1560c2;
+    color: white;
+    width: 360px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+
+.boxright .register {
+    background-color: #42B72A;
+    color: white;
+    width: 155px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.boxright .register a {
+    font-size: 19px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.boxright .line {
+    width: 360px;
+    margin: 20px 16px;
+}
+
+/* firstsection */
+.firstsection {
+    height: 95vh;
+}
+
+.firstsection .boxleft {
+    margin-top: 170px;
+}
+
+/* secoundsection */
+.secoundsection {
+    background-color: #fff;
+}
+
+.secoundsection ul {
+    text-align: left;
+}
+
+.secoundsection a {
+    text-decoration: none;
+    color: #385898;
+}
+
+.secoundsection li {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding-right: 10px;
+    margin: 6px 0;
+}
+
+.secoundsection .copyright {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #737373;
+}
+
+/* .secoundsection .footertop > ul {
+    text-align: center;
+} */
