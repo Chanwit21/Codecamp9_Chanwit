@@ -3,6 +3,7 @@ console.log("ให้หาผลรวมและค่าเฉลี่ย�
 
 let result = 0;
 let input = 0;
+//แบบที่1
 while (true) {
     input = prompt("Input Your Number :");
     if (input < 0 ||input ==="0" || input === null || input.trim() === "" || !(+input)) { //!(+input) ใช้ Check ว่าเป็น String ไหม
