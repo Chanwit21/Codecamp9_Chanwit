@@ -1,2 +1,0 @@
-// bomchanwit
-/*BOMB CHanwit*/ 
