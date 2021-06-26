@@ -1,3 +1,5 @@
 // ให้เขียนฟังก์ชันคำนวณแต้มฟุตบอล โดยชนะได้ 3 คะแนน เสมอได้ 1 คะแนน และแพ้ไม่ได้คะแนน
 
-let calPoint = (win,draw,lose) => win*3+draw*1+lose*0;
+let calPoint = (win,draw,lose) => `ทีมของคุณแข่งจำนวน ${win+draw+lose} ได้ ${win*3+draw*1+lose*0} คะแนน`;
+
+console.log(calPoint(+prompt("ใส่จำนวนเกมส์ที่ชนะ"),+prompt("ใส่จำนวนเกมส์ที่เสมอ"),+prompt("ใส่จำนวนเกมส์ที่แพ้")));

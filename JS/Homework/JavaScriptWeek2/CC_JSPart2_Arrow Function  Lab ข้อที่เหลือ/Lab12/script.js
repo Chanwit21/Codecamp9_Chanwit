@@ -12,11 +12,11 @@ let factorial = (num) => {
 }
 
 //recursive
-function fac(n){
-    if(n=1){
-        return 1
-    } else {
-        return n*fac(n-1)
-    }
-}
+// function fac(n){
+//     if(n>=1){
+//         return n*fac(n-1)
+//     } else {
+//         return 1
+//     }
+// }
 
