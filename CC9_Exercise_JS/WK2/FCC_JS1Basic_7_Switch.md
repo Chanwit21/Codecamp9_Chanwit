@@ -1,4 +1,4 @@
-# Switch (7ข้อ)
+# Switch (4ข้อ)
 # Prerequisite
 - function
 # Content
