@@ -135,21 +135,21 @@ function testGreaterThan(val) {
 testGreaterThan(10);
 ```
 
-[7.Comparison with the Greater Than Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-greater-than-operator)
+[7.Comparison with the Greater Than Or Equal Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-greater-than-or-equal-to-operator)
 ```js
-function testGreaterThan(val) {
-  if (val > 100) {  // Change this line
-    return "Over 100";
+function testGreaterOrEqual(val) {
+  if (val >= 20) {  // Change this line
+    return "20 or Over";
   }
 
-  if (val > 10) {  // Change this line
-    return "Over 10";
+  if (val >= 10) {  // Change this line
+    return "10 or Over";
   }
 
-  return "10 or Under";
+  return "Less than 10";
 }
 
-testGreaterThan(10);
+testGreaterOrEqual(10);
 ```
 
 [8.Comparison with the Less Than Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-less-than-operator)
