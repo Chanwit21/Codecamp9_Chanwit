@@ -1,6 +1,6 @@
 // ให้เขียนฟังก์ชันคำนวณค่า factorial
 
-let factorial = (num) => {
+const factorial = (num) => {
     let result = 1;
     if (num === 0) {
         return 1;
