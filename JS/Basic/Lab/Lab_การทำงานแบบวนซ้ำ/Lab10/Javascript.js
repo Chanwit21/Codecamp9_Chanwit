@@ -19,20 +19,33 @@ console.log("ให้เขียนโค้ดเพื่อหาจำน�
 //   }
 // }
 
-let start = 2;
-let final = 100;
-let count1 = 0;
+//วิธีของเรา
+// let start = 2;
+// let final = 100;
+// let count1 = 0;
 
-for (let i = start; i <= final; i++) {
-  let count = 0;
-  for (let j = start; j <= final;j++ ){
-    if (i%j === 0) {
-      count++;
-      // console.log(count);
+// for (let i = start; i <= final; i++) {
+//   let count = 0;
+//   for (let j = start; j <= final;j++ ){
+//     if (i%j === 0) {
+//       count++;
+//       // console.log(count);
+//     }
+//   }
+//   if (count === 1) {
+//     count1++
+//     console.log(`จำนวนเฉพาะตัวที่ ${count1} : ${i}`);
+//   }
+// }
+
+//แบบเฉลย
+for (let i = 2; i<=100;i++ ) {
+  let isPrime = true;
+  for (let j = 2; j < i ; j++){
+    if ( i % j === 0) {
+      isPrime = false;
+      break;
     }
   }
-  if (count === 1) {
-    count1++
-    console.log(`จำนวนเฉพาะตัวที่ ${count1} : ${i}`);
-  }
+  if (isPrime) console.log(i);
 }

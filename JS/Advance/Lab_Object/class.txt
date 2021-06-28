@@ -1,0 +1,5 @@
+Object key จะเป็น String เสมอๆ
+
+การใช้ Object.assign จะไล่ Merge จากขวามาซ้าย
+
+this ของ arrow Function จะเป็น this เดียวกับของชั้นที่ครอบมัน 1 ชั้น ( ชั้นที่เป็น Parent มัน) 

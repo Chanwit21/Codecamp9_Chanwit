@@ -1,3 +1,3 @@
 // ให้เขียนฟังก์ชันแปลงอุณหภูมิจาก farenheit เป็น celsius
 
-const convertFtoC = (farenheit) => (farenheit - 32)*5/9;
+const convertFarenheitToCelcise = farenheit => (farenheit - 32)*5/9;

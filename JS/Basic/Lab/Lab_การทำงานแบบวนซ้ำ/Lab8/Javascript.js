@@ -4,10 +4,24 @@ console.log("ให้หาผลรวมและค่าเฉลี่ย�
 let sum = 0;
 let count = 0;
 let input = 0;
+
 //แบบที่1
 while (true) {
     input = prompt("Input Your Number :");
-    if (input < 0 ||input ==="0" || input === null || input.trim() === "" || !(+input)) { //!(+input) ใช้ Check ว่าเป็น String ไหม
+    if (input < 0 ||input === "0" || input === null || input.trim() === "" || !(+input)) { //!(+input) ใช้ Check ว่าเป็น String ไหม
+        break;
+    };
+    count++;
+    sum += +input;
+    // console.log(input);
+};
+
+alert(`ผลรวมของค่าทั้งหมดที่ใส่เข้ามาคือ ${sum} ค่าเฉลี่ยของค่าทั้งหมดที่ใส่เข้ามาคือ ${sum/count}`);
+
+//refactor
+while (true) {
+    input = prompt("Input Your Number :");
+    if (+input <= 0 || !(+input)) { //!(+input) ใช้ Check ว่าเป็น String ไหม
         break;
     };
     count++;

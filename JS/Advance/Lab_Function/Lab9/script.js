@@ -1,6 +1,7 @@
 //ให้สร้างฟังก์ชันรับพารามิเตอร์เป็นตัวเลข และเช็คว่าตัวเลขนั้นเป็นจำนวนเฉพาะหรือไม่
 //ให้สร้างฟังก์ชันรับรับพารามิเตอร์เป็นตัวเลข และแสดงตัวเลขจำนวนเฉพาะทั้งหมดตั้งแต่ 1 ถึงตัวเลขที่รับมาเป็นพารามิเตอร์
 
+//แบบของเรา
 function checkPrimeNumber(num1) {
   // let str = null;
   let count = 0;
@@ -32,5 +33,20 @@ function showPrimeNumberto(num2) {
     if (count === 1) {
       console.log(`${i}`);
     }
+  }
+}
+
+//เฉลย
+function isPrimenunber(number) {
+  for (let j = 2; j < number; j++) {
+    if (number % j === 0) return false;
+  }
+  return true;
+}
+
+
+function logPrimenunber(number) {
+  for (let i = 2; i <= number ; i++) {
+    if (isPrimenunber(i)) console.log(i);
   }
 }
