@@ -6,16 +6,34 @@
 // ถ้า role เป็น “ADMIN” ให้ alert “ACCESS GRANTED”
 // ถ้า role ไม่ใช่ “ADMIN” ให้ alert “ACCESS DENIED”
 
-function checkPermission(role,yes,no) {
+//แบบของเรา
+const checkPermission = function (role,yes,no) {
     if (role === "ADMIN") return yes();
     return no();
 }
 
-function roleAdmin() {
+const roleAdmin = function () {
     return alert("ACCESS GRANTED");
 }
 
-function roleNotADMIN() {
+const roleNotADMIN = function () {
+    return alert("ACCESS DENIED");
+}
+
+let str = prompt("Input Your Username:")
+console.log(checkPermission(str,roleAdmin,roleNotADMIN));
+
+//เฉลย
+const checkPermission = function (role,success,reject) {
+    if (role === "ADMIN") return success();
+    return reject();
+}
+
+const roleAdmin = function () {
+    return alert("ACCESS GRANTED");
+}
+
+const roleNotADMIN = function () {
     return alert("ACCESS DENIED");
 }
 

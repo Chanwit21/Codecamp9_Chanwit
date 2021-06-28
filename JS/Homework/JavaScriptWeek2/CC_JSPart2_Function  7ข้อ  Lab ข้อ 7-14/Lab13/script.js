@@ -12,12 +12,8 @@
 // }
 
 function checkAge(age) {
-  if (age > 18) {
-    return true;
-  }
-  if (age < 19) {
-    return confirm("Did parents allow you?");
-  }
+  if (age > 18) return true;
+  return confirm("Did parents allow you?");
 }
 
 // function checkAge(age) {

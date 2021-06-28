@@ -3,12 +3,15 @@
 let user = prompt("Input Your Username");
 let pass = prompt("Input Your password")
 
+// แบบที่ 1
 function login(username = null,password = null) {
-    if (username === "admin" && password === "P@ssw0rd") {
-        alert("Login สำเร็จ");
-    } else {
-        alert("login ไม่สำเร็จ");
-    }
+    if (username === "admin" && password === "P@ssw0rd") return true;
+    return false;
+}
+
+// แบบที่ 2
+function login(username = null,password = null) {
+    return username === "admin" && password === "P@ssw0rd"
 }
 
 login(user,pass);

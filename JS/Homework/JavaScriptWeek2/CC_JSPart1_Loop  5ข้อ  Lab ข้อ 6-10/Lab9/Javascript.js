@@ -8,13 +8,15 @@ while (true) {
   if ( 1 < num1 && num1 < 99) {
     break;
   };
+  alert("You don't enter number")
 };
 
 let num2 = 0;
-let round = 1;
+let round = 0;
 
 while(true) {
   num2 = +prompt("สำหรับผู้เล่นคนที่ 2 \nใส่เลขระหว่าง 1 ถึง 99 ที่ต้องการทายมา");
+  round++;
   if (num1 === num2 ) {
     alert (`ยินดีด้วยคุณทายถูกแล้ว โดยจำนวนครั้งที่คุณใช้ทายคือ ${round}`);
     break;
@@ -24,5 +26,36 @@ while(true) {
   } else {
     alert(`ค่าที่คุณทายมีค่ามากกว่าค่าที่ถูกต้อง`);
   }
-  round++;
+}
+
+// แบบเฉลย
+
+const correctNumber = prompt("Enter correct nummber");
+
+if(!isNumeric(correctNumber)) {    //check ว่าไม่ใช่ null  ไม่ใช่ String เปล่า ไม่ใช่ตัวเลข
+  alert("You don't enter number");
+}
+
+let count = 0;
+
+while (1) {
+  const guessNumber = prompt('Guess my Number');
+  if(!isNumeric(guessNumber)) {    //check ว่าไม่ใช่ null  ไม่ใช่ String เปล่า ไม่ใช่ตัวเลข
+    alert("You don't enter number");
+    continue;
+  }
+
+  count++;
+
+  if (+correctNumber === +guessNumber) {
+    alert(`ยินดีด้วยคุณทายทั้งหมด ${count} ครั้ง`)
+  } else if (+correctNumber < +guessNumber) {
+    alert("ค่ามากเกินไป");
+  } else {
+    alert("ค่าน้อยเกินไป");
+  }
+}
+
+function isNumeric(str) {
+  return !(!str || str.trim() === "" || !+str)
 }
