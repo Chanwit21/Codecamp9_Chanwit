@@ -7,10 +7,29 @@ let menu = {
 };
 
 function multiplyNumeric(obj, num) {
+  let result = {};
     for (let key in obj) {
-        if (typeof(obj[key]) !== "number") continue;  //ถ้า .key จะไปหา key ที่ชื่อ "key" เลยมาใส่
-        obj[key] = obj[key]*num;
+        if (isNaN(obj[key]) || typeof(obj[key]) !== "number") {
+          result[key] = obj[key];  
+        } else {
+          //ถ้า .key จะไปหา key ที่ชื่อ "key" เลยมาใส่
+        result[key] = obj[key]*num;
+      }
     }
+    return obj;
 }
 
 console.log(multiplyNumeric(menu,3));
+
+//เฉลย
+// const multiplyNumeric = (obj,num) => {
+//   let result = {};
+//   for(let key in  obj) {
+//     if (isNaN(obj[key])){
+//       result[key] = obj[key];
+//     } else {
+//       result[key] = obj[key]*num;
+//     }
+//   }
+//   return result;
+// }

@@ -20,6 +20,7 @@ const employees = {
   },
 };
 
+//แบบของเรา
 const staffName = prompt("Enter Name");
 
 if (staffName in employees) {
@@ -28,4 +29,12 @@ if (staffName in employees) {
     );
 } else {
     console.log(`Your Staffname Not in Employees`);
+}
+
+//เฉลย
+const name = prompt('Enter Employees Name');
+if (employees[name]) {
+  console.log(`Name : ${name},  salary : ${employees[name].salary}, address: ${employees[name].address.district}, ${employees[name].address.province} `);
+} else {
+  console.log("Not Found")
 }

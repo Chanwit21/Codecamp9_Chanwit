@@ -5,8 +5,14 @@ const username = prompt("Enter Username");
 const email = prompt("Enter Email");
 const password = prompt("Enter Password");
 
-let user = {
+const user = {
     username,
     email,
     password,
+}
+//อีกแบบ
+const user1 = {
+    username: username,
+    email:email,
+    password:password,
 }

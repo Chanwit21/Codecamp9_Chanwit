@@ -7,10 +7,21 @@ let salaries = {
   Pete: 130,
 };
 
-let sumSalaries  = 0;
-for ( key in salaries ){                //key ในนี้เป็น String ที่มี "
-    // console.log(salaries[key])
-    sumSalaries += salaries[key];
-}
+// let sumSalaries = 0;
+// for (key in salaries) {
+//   //key ในนี้เป็น String ที่มี "
+//   // console.log(salaries[key])
+//   sumSalaries += salaries[key];
+// }
 
-console.log(sumSalaries);
+// console.log(sumSalaries);
+
+//เฉลย
+const calcSumSalaries = function (obj) {
+  let sum = 0;
+  for (key in obj) {
+    sum += obj[key];
+  };
+  return sum;
+};
+console.log(calcSumSalaries(salaries));

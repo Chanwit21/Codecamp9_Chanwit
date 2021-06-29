@@ -9,3 +9,11 @@ const checkEmphasizeObject = (obj) => {
     if (isEmphasize) return true;
     return false;
 }
+
+//เฉลย
+const checkEmphasizeObject = (obj) => {
+    for (let key in obj) {
+        return false;
+    }
+    return true;
+}
