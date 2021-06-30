@@ -1,0 +1,218 @@
+/*tempolary*/
+/* .container {
+  outline: 1px dashed red;
+} */
+
+/* GLobal */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 body {
+  margin: 0;
+}
+
+html {
+  background: darkgray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+body {
+  background-color: lightblue;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* Header */
+header {
+  background: #87cfeba8;
+  color: whitesmoke;
+  min-height: 100px;
+  /* padding-top: 30px; */
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 3px solid salmon;
+  position: sticky;
+  top: 0;
+}
+
+header .container {
+  justify-content: space-between;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  padding: 0 20px;
+}
+
+header nav {
+  display: flex;
+  align-items: flex-end;
+}
+
+header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: inherit;
+}
+
+header a:hover {
+  color: slateblue;
+  font-weight: bold;
+}
+
+header span {
+  color: deeppink;
+}
+
+/* Showcase */
+.showcase {
+  min-height: 400px;
+  background: url("https://picsum.photos/id/2/1500/500/?blur=4") no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.showcase .container {
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase h1 {
+  font-size: 55px;
+}
+
+.showcase p {
+  font-size: 20px;
+  color: deeppink;
+  width: 80%;
+}
+
+/* Newsletter */
+.newsletter {
+  padding: 15px;
+  background: lightskyblue;
+  color: coral;
+}
+
+.newsletter .container {
+  justify-content: space-between;
+}
+
+.newsletter input[type="email"] {
+  width: 250px;
+  height: 25px;
+  padding: 4px;
+  border-radius: 4px;
+  border: none;
+}
+
+.newsletter button {
+  height: 35px;
+  background-color: coral;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 0 20px;
+}
+
+/* Boxes */
+.boxes {
+  margin-top: 20px;
+}
+
+.boxes .container {
+  justify-content: space-between;
+}
+
+.boxes img {
+  height: 120px;
+}
+
+.boxes .box {
+  text-align: center;
+  padding: 12px;
+}
+
+footer {
+  min-height: 60px;
+  color: whitesmoke;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    position: static;
+  }
+  header .container,
+  .newsletter .container {
+    flex-flow: column;
+    align-items: center;
+  }
+  header ul {
+    justify-content: center;
+  }
+  .showcase h1 {
+    font-size: 44px;
+  }
+  .showcase p {
+    font-size: 16px;
+  }
+  .newsletter form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .newsletter form > * {
+    width: 100%;
+    margin: 10px auto;  
+  }
+  .boxes .container {
+    flex-flow: column;
+  }
+}
+
+@media (max-width: 555px) {
+  header ul {
+    flex-flow: column;
+  }
+  header li {
+    text-align: center;
+    border-bottom: 1px solid lime;
+  }
+  .newsletter form {
+    width: 80%;
+  }
+  .newsletter input[type="email"] {
+    width: 100%;
+  }
+}

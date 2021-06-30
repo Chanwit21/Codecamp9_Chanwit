@@ -5,8 +5,8 @@ const sales = [
   { price: 500, discount: 0.05 },
   { price: 100 },
 ];
-const summary = [];
-let length = 0;
+// const summary = [];
+// let length = 0;
 
 //แบบยาวๆ
 // for (let key in sales) {
@@ -21,11 +21,23 @@ let length = 0;
 // }
 
 //แบบสั้น
-for (let key in sales) {
-    let result = {};
-    result["netPrice"] = (sales[key].discount)? sales[key].price*(1-sales[key].discount) : sales[key].price;
-    summary[length] = result;
-    length++;
-}
+// for (let key in sales) {
+//     let result = {};
+//     result["netPrice"] = (sales[key].discount)? sales[key].price*(1-sales[key].discount) : sales[key].price;
+//     summary[length] = result;
+//     length++;
+// }
 
-console.log(summary)
+// console.log(summary)
+
+//อีกแบบ
+function calcPrice(sale) {
+  const summary = [];
+  for (let i = 0; i < sales.length;i++ ) {
+    let result = {};
+    result.netPrice = (sale[i].discount)? sale[i].price*(1-sale[i].discount) : sale[i].price;
+    summary[i] = result;
+    console.log(summary);
+  }
+}
+console.log(calcPrice(sales));
