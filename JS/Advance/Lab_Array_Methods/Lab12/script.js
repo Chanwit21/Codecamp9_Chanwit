@@ -4,6 +4,5 @@ const names = ['Mike', 'Sid', 'Jack', 'Bill'];
 // 2. Sid
 // 3. Jack
 // 4. Bill
-names.forEach((element,index) => {
-    console.log(`${index+1}. ${element}`);    
-});
+const logName = (element,index) => console.log(`${index+1}. ${element}`);
+names.forEach(logName);
