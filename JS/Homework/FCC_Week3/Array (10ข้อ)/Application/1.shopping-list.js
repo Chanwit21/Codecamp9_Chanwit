@@ -1,0 +1,1 @@
+var myList = [["Game", 30],["iphone", 999],["Banana", 10],["Noodle", 7],["Compuuter", 1000]];

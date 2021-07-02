@@ -1,0 +1,1 @@
+let yourArray = ["BOMB",true,23,"Chanwit","Pansila"]; // Change this line
