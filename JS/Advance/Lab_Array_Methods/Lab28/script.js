@@ -1,15 +1,19 @@
 // จงเขียนฟังก์ชัน copySorted(arr) เพื่อ return array ที่เรียงข้อมูลใน arr จากน้อยไปหามาก โดยที่ arr ต้องมีค่าเหมือนเดิม
 // ตัวอย่างผลลัพธ์
 let arr = ['React', 'Vue', 'Angular'];
+
+
+// function copySorted(array) {
+//     let clone = [...array];
+//     let result = clone.sort();
+//     return result;
+// }
+
+// เฉลย
 function copySorted(array) {
-    let clone = [...array];
-    function compareString(a,b) {
-        if (a > b) return 1;
-        if (a === b) return 0;
-        if (a < b) return -1;
-    }
-    let result = clone.sort(compareString)
-    return result;
+    // const result = arr.slice();
+    // return result.sort();
+    // return arr.slice().sort(); หรือใช้แบบนี้
 }
 let sorted = copySorted(arr);
 

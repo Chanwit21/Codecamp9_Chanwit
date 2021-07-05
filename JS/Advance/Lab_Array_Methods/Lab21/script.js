@@ -8,6 +8,7 @@
 // const array = [1, 2, 3, 4];
 // // ค่าที่เป็นเลขคี่
 // const result = array.filter((item) => item % 2 === 1)
+// const result = array.filter((item) => item % 2)          //ถ้าเป็นเลขคู่ item % 2 จะเป็น 0 ให้ค่า false
 // console.log(result)
 
 // const array = [1, '1', 2, {}];
@@ -33,6 +34,7 @@
 // const array = ['Elephant', 'Ant', 'Cat', 'Eagle', 'Zebra'];
 // // ค่าที่ขึ้นต้นด้วยตัว E
 // const result = array.filter((item) => item[0] === 'E')
+// const result = array.filter((item) => item.startsWith('E'));
 // console.log(result)
 
 // มี 2 วิธี
@@ -59,6 +61,7 @@
 // const array = ['Krabi', 'Chonburi', 'Buriram', 'Saraburi','Phrae'];
 // // ค่าที่มีคำว่า buri เป็นส่วนประกอบโดยไม่สนใจตัวพิมพ์เล็กหรือตัวพิมพ์ใหญ่
 // const result = array.filter((item) => item.toLowerCase().includes('buri'))
+// const result = array.filter((item) => item.toUpperCase().includes('BURI'))
 // console.log(result)
 
 // const array = [

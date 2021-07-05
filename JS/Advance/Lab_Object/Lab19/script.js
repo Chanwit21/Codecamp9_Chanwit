@@ -3,6 +3,7 @@
 // sum() ให้ return ค่าผลบวกของเลขทั้งสอง
 // mul() ให้ return ค่าผลคูณของเลขทั้งสอง
 
+// วิธีเฉลย
 // let calculator = {
 //   // ... your code ...
 //   read() {
@@ -19,7 +20,6 @@
 
 // วิธีนี้ยืดหยุ่นกว่า
 let calculator = {
-  // ... your code ...
   read() {
       for(let i = 0; i < 2; i++ ) {
           this[`num${i}`] = +prompt(`Enter Number ${i+1}`)
@@ -40,6 +40,7 @@ let calculator = {
       return mul
     },
 };
+
 
 calculator.read();
 alert(calculator.sum());

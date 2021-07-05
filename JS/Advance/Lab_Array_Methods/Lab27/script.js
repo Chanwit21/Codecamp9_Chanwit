@@ -7,11 +7,5 @@ const arr = [
   { name: "Mary", age: 28 },
 ];
 
-function compareObjectAge(a, b) {
-  if (a.age > b.age) return 1;
-  if (a.age === b.age) return 0;
-  if (a.age < b.age) return -1;
-}
-
-const result = arr.sort(compareObjectAge);
+const result = arr.sort((a,b) => a.age - b.age);
 console.log(result)

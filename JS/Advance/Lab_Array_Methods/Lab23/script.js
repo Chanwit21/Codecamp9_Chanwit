@@ -27,12 +27,14 @@
 // const array = [1, 3, 4, 5, 6, 7, 8];
 // // result: ["odd", "odd", "even", "odd", "even", "odd", "even"]
 // const result = array.map((item) => (item % 2 === 0)? "even":"odd")
+// const result = array.map((item) => (item % 2)? "odd":"even")
 // console.log(array)
 // console.log(result)
 
 // const array = [1, -3, 2, 8, -4, 5];
 // // result: [1, 3, 2, 8, 4, 5]
 // const result = array.map((item) => Math.abs(item))
+// const result = array.map((item) => item > 0 ? item: item*(-1))
 // console.log(array)
 // console.log(result)
 
@@ -45,6 +47,8 @@
 // const array = [0, 5, 10, 7, 6, 5, 0];
 // // result: ["Jan", "Jun", "Nov", "Aug", "Jul", "Jun", "Jan"]
 // const result = array.map((item) => {
+//     let MONTH = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+//     return arrOfMonth[item];
 //     let result = "";
 //   switch (item) {
 //     case 0:
@@ -91,8 +95,7 @@
 
 // const array = [1, 16, 81, 256, 625, 1296];
 // // result: [1, 2, 3, 4, 5, 6]
-// let i = 0;
-// const result = array.map(() => ++i )
+// const result = array.map(() => Math.sqrt(Math.sqrt(item)) )
 // console.log(array)
 // console.log(result)
 
@@ -136,11 +139,12 @@
 // //   { name: "banana", birth: "1990-10-01", age: 29 },
 // //   { name: "watermelon", birth: "1985-12-01", age: 33 },
 // // ]
-// const result = array.map((element) => {
-//     let clone = {...element}
-//     clone.age = 2021 - +element.birth.split("-")[0]
-//     return clone;
-// });
+// // const result = array.map((element) => {
+// //     let clone = {...element}
+// //     clone.age = 2021 - +element.birth.split("-")[0]
+// //     return clone;
+// // });
+// const result = array.map(element => ({ name: element.name, birth: element.birth, age: 2021 - +element.birth.split("-")[0]}));
 // console.log(array)
 // console.log(result)
 
@@ -149,52 +153,12 @@
 //   { name: "banana", birth: "1990-10-10" },
 //   { name: "watermelon", birth: "1985-12-30" },
 // ];
-// // result: [
-// //     "<tr><td>apple</td><td>01 jan 2000</td></tr>",
-// //     "<tr><td>banana</td><td>10 oct 1990</td></tr>",
-// //     "<tr><td>watermelon</td><td>30 dec 1985</td></tr>",
-// // ]
-// const result = array.map((element) => {
-//     let month = "";
-//   switch (+element.birth.split("-")[1]) {
-//     case 0:
-//         month = "Jan";
-//       break;
-//     case 1:
-//         month = "Feb";
-//       break;
-//     case 2:
-//         month = "Mar";
-//       break;
-//     case 3:
-//         month = "Apr";
-//       break;
-//     case 4:
-//         month = "May";
-//         break;
-//     case 5:
-//         month = "Jun";
-//         break;
-//     case 6:
-//         month = "Jul";
-//         break;
-//     case 7:
-//         month = "Aug";
-//         break;
-//     case 8:
-//         month = "Sep";
-//         break;
-//     case 9:
-//         month = "Oct";
-//         break;
-//     case 10:
-//         month = "Nov";
-//         break;
-//     case 11:
-//         month = "Dec";
-//         break;
-//   }
-//     return `<tr><td>${element.name}</td><td>${element.birth.split("-")[2]} ${month} ${element.birth.split("-")[0]}</td></tr>`
-// });
+// // // result: [
+// // //     "<tr><td>apple</td><td>01 jan 2000</td></tr>",
+// // //     "<tr><td>banana</td><td>10 oct 1990</td></tr>",
+// // //     "<tr><td>watermelon</td><td>30 dec 1985</td></tr>",
+// // // ]
+// let MONTH = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+// const result = array.map(item => `<tr><td>${item.name}</td><td>${item.birth.split("-")[2]} ${MONTH[+item.birth.split("-")[1]-1].toLowerCase()} ${item.birth.split("-")[0]}</td></tr>`)
 // console.log(array);
 // console.log(result);

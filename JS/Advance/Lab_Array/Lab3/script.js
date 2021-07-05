@@ -7,7 +7,7 @@
 
 const styles = new Array("Jazz","Blues");
 console.log(styles);
-styles.push("Rock-n-Roll");
+styles[styles.length] = "Rock-n-Roll";
 console.log(styles);
 styles[(styles.length-1)/2] = "Classic";
 console.log(styles);

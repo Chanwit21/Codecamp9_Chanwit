@@ -5,7 +5,6 @@ const permission2 = { canUpdate: true, canCreate: true };
 const permission3 = { canCreate: false, canDelete: true };
 const permission4 = { canView: true };
 
-const permission = {};
-Object.assign(permission,permission1,permission2,permission3,permission4)
+const permission = Object.assign({},permission1,permission2,permission3,permission4)
 
 console.log(permission);

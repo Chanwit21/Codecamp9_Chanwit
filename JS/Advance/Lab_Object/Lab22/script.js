@@ -16,3 +16,6 @@ const product1 = {
 const product2 = {};
 console.log(product1.distributor.address.province);
 console.log(product2.distributor?.address?.province);
+// เฉลย
+console.log(product2?.distributor?.address?.province);
+

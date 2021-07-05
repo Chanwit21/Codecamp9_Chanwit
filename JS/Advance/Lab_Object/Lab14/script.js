@@ -8,10 +8,15 @@ const notebook = {
   storage: "512GB PCIe NVMe M.2 SSD",
 };
 
-let notebookCopy1 = {};
+const cloneNotebook1 = {};
 for (let key in notebook) {
-    notebookCopy1[key] = notebook[key];
+  cloneNotebook1[key] = notebook[key];
 }
+console.log(cloneNotebook1);
 
-let notebookCopy2 = {};
-Object.assign(notebookCopy2,notebook);
+let cloneNotebook2 = {};
+Object.assign(cloneNotebook2,notebook);
+console.log(cloneNotebook2);
+
+const cloneNotebook3 = Object.assign({},notebook);
+console.log(cloneNotebook3);

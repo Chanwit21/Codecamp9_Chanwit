@@ -25,3 +25,10 @@ function checkText(str) {
 
 let string = prompt("Enter text");
 console.log(checkText(string));
+
+// เฉลย
+function checkSpam(str1) {
+  if (!str1) return false;
+  return str1.toLowerCase().includes("xxx") || str1.toLowerCase().includes("sex") || str1.toLowerCase().includes("porn");
+}
+console.log(checkSpam(string));

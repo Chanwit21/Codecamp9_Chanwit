@@ -37,7 +37,24 @@ function calcPrice(sale) {
     let result = {};
     result.netPrice = (sale[i].discount)? sale[i].price*(1-sale[i].discount) : sale[i].price;
     summary[i] = result;
-    console.log(summary);
+    // console.log(summary);
   }
+  return summary;
 }
 console.log(calcPrice(sales));
+
+//เฉลย 
+const summary1 = [];
+for (let i = 0; i < sales.length;i++ ) {
+  netPrice1 = sales[i].price*(1-(sales[i].discount ? sales[i].discount : 0));
+  // let netPrice = 0;
+  // if(sales[i].discount) {
+  //   netPrice = sales[i].price*(1-sales[i].discount);
+  // } else {
+  //   netPrice = sales[i].price
+  // }
+  // netPrice1 = sales[i].price*(1-sales[i].discount || 0);
+  // netPrice1 = sales[i].price*(1-sales[i].discount ?? 0);
+  summary1[i] = {netPrice1};
+}
+console.log(summary1);

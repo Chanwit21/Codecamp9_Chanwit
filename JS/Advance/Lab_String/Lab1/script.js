@@ -2,4 +2,8 @@
 
 const str = `c:\\Users\\Admin\\Desktop`
 
-console.log(str)
+console.log(str);
+
+//เฉลย
+const path = `c:\\Users\\Admin\\Desktop`
+console.log(path);

@@ -1,3 +1,4 @@
+// เฉลยใช้วิธีนี้
 // function Calculator() {
 //   this.read = function () {
 //     this.num1 = +prompt("Enter First Number");

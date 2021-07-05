@@ -7,4 +7,11 @@ function extractCurrencyValue(string, rate) {
     return "THB" + (string.slice(1)*rate)
 }
 
-console.log(extractCurrencyValue('$3600', 30));
+//เฉลย
+function extractCurrencyValue1(string, rate) {
+    if(!string) return string;
+    return string.slice(1)*rate;
+}
+
+console.log(extractCurrencyValue('$120', 30));
+console.log(extractCurrencyValue1('$120', 30));

@@ -47,13 +47,41 @@
 
 
 // fine fineindex
-const product = ['Coke','Pepsi','Mirinda','Fanta'];
-const founded = product.find((item,index,array) => {
-    return item.includes('z');
-});
-console.log(founded)
+// const product = ['Coke','Pepsi','Mirinda','Fanta'];
+// const founded = product.find((item,index,array) => {
+//     return item.includes('z');
+// });
+// console.log(founded)
 
-const idx = product.findIndex((item,index,array) => {
-    return item.includes('e');
-});
-console.log(idx)
+// const idx = product.findIndex((item,index,array) => {
+//     return item.includes('e');
+// });
+// console.log(idx)
+
+
+// Array Reduce Example
+const nums = [-3,2,11,-7,4,6];
+const result = nums.reduce((accumulator, item, index, array) => {
+    console.log(`acc ; ${accumulator},item ; ${item},index ; ${index},array ; ${array}`);
+    return accumulator + item; //สิ่งที่ Return ในแต่ละรอบจะไปเป็นค่า accumulator ของรอบถัดไป
+},0)
+console.log(result);
+//first call callback function
+// accumulator = initial value (0),item = first element of array (-3),index = array index (0)
+// array = self ([-3,2,11,-7,4,6]) return accumulator + item (0 + 3 = -3)
+//secound call callback function
+// accumulator = return value from first call (-3),item = secound element of array (2),index = array index (1)
+// array = self ([-3,2,11,-7,4,6]) return accumulator + item (-3 + 2 = -1)
+//third call callback function
+// accumulator = return value from secound call (-1),item = third element of array (11),index = array index (2)
+// array = self ([-3,2,11,-7,4,6]) return accumulator + item (-1 + 11 = 10)
+//fourth call callback function
+// accumulator = return value from third call (10),item = fourth element of array (-7),index = array index (3)
+// array = self ([-3,2,11,-7,4,6]) return accumulator + item (10 + -7 = 3)
+//fifth call callback function
+// accumulator = return value from fourth call (3),item = fifth element of array (4),index = array index (4)
+// array = self ([-3,2,11,-7,4,6]) return accumulator + item (3 + 4 = 7)
+//sixth call callback function
+// accumulator = return value from fifth call (7),item = sixth element of array (6),index = array index (5)
+// array = self ([-3,2,11,-7,4,6]) return accumulator + item (7 + 6 = 13)
+//end of array no more call callback function then return value from last call (13) toresult
