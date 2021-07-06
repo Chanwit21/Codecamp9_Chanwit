@@ -8,6 +8,7 @@ function countPerson(arr) {
         } else {
             accumulator[item] += 1;
         }
+        console.log(accumulator);
         return accumulator;
       }, {});
       return result;
