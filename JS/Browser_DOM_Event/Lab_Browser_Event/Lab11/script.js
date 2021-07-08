@@ -8,25 +8,29 @@ const minus = document.querySelectorAll('button')[1];
 const reset = document.querySelectorAll('button')[2];
 let count = 0;
 plus.addEventListener('click',()=>{
-    let update = document.querySelectorAll('button')[0];
-    let del = document.querySelector('h1')
-    count = count+1;
-    del.remove()
-    update.insertAdjacentHTML('afterend',`<h1 style="display: inline-block;">${count}</h1>`)
+    // let update = document.querySelectorAll('button')[0];
+    let plus1 = document.querySelector('h1')
+    // count = count+1;
+    plus1.innerHTML = ++count;
+    // console.log(del.innerHTML)
+    // del.remove()
+    // update.insertAdjacentHTML('afterend',`<h1 style="display: inline-block;">${count}</h1>`)
 })
 minus.addEventListener('click',()=>{
-    let update = document.querySelectorAll('button')[0];
-    let del = document.querySelector('h1')
+    // let update = document.querySelectorAll('button')[0];
+    let minus1 = document.querySelector('h1')
     if(count > 0){
-        count = count-1;
+        // count = count-1;
+        minus1.innerHTML = --count
     }
-    del.remove()
-    update.insertAdjacentHTML('afterend',`<h1 style="display: inline-block;">${count}</h1>`)
+    // del.remove()
+    // update.insertAdjacentHTML('afterend',`<h1 style="display: inline-block;">${count}</h1>`)
 })
 reset.addEventListener('click',()=>{
-    let update = document.querySelectorAll('button')[0];
-    let del = document.querySelector('h1')
+    // let update = document.querySelectorAll('button')[0];
+    let resetCount = document.querySelector('h1')
     count = 0
-    del.remove()
-    update.insertAdjacentHTML('afterend',`<h1 style="display: inline-block;">${count}</h1>`)
+    resetCount.innerHTML = count;
+    // del.remove()
+    // update.insertAdjacentHTML('afterend',`<h1 style="display: inline-block;">${count}</h1>`)
 })
