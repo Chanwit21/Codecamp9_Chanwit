@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser_DOM_Event</title>
+  </head>
+  <body>
+    <div style="text-align: center; margin-top: 250px">
+      <input
+        type="button"
+        onclick="(e)=>countRabbits(e)"
+        value="Count rabbits!"
+        style="
+          width: 300px;
+          height: 170px;
+          background-color: coral;
+          box-shadow: 3px 3px 10px gray;
+        "
+      />
+
+      <input
+        id="elem"
+        name="email"
+        type="text"
+        value="initial Value"
+        style="
+          background-color: rgb(197, 191, 107);
+          box-shadow: 3px 3px 10px gray;
+        "
+      />
+
+      <input
+        id="elem3"
+        type="button"
+        value="Click me"
+        style="
+          width: 300px;
+          height: 170px;
+          background-color: rgb(35, 159, 231);
+          box-shadow: 3px 3px 10px gray;
+        "
+      />
+      <form action="https://www.google.com">
+          <button>Submmit</button>
+      </form>
+
+      <a href="https://www.google.com">GOOGLE</a>
+    </div>
+    <script>
+      function countRabbits(e) {
+        for (let i = 1; i <= 3; i++) alert("Rabbit number " + i);
+        console.log(e)
+        
+      }
+
+      const elem = document.getElementById("elem");
+      elem.onclick =  ()=> {
+        alert("Thank you");
+      };
+      elem.addEventListener('change',function(event){
+          console.log(event)
+      })
+
+      const aTag = document.querySelector('a');
+      console.dir(aTag)
+      aTag.addEventListener('click',event=>{
+          console.log(event)
+          event.preventDefault()
+          alert('Can not Exit In this Web Page')
+      })
+
+      // Add EventListener สามารถเพิ่มหลายๆตัวใน 1 Event ได้ ไม่ควรใช้ Anonymus Function เพราะว่าจะทำให้เกิดการ Remove ไม่ได้ เวลาใส่ Handle Function ควรส่งค่า Function ที่ยังไม่ถูกเรียกไปที่ Handle เพราะถ้าเรียกแล้วจะเป็นการส่งค่าที่ Return ให้ไป
+      const elem3 = document.getElementById("elem3");
+      elem3.addEventListener("click", () => alert("Thank you"));
+      elem3.addEventListener("click", () => alert("Hello"));
+    </script>
+  </body>
+</html>

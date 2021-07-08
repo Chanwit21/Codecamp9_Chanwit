@@ -1,0 +1,14 @@
+อย่าลืม Text Node ด้วย
+Html Collection เป็น  Iterable ชนิดหนึ่ง แต่ไม่ใช่ Array นะ
+
+อ้างอิงเหมือนArray เลยแต่ตัวมันไม่ใช่ Array นะ
+.innerHtml คือเข้าถึงสิ่งที่อยู่ภายใน tag
+
+append คือแทกเข้าไปอยู่ first Chile ของ element นั้น
+prepend คือแทกเข้าไปอยู่ last Chile ของ element นั้น
+
+before คือก่อน  element นั้นๆ
+after คือหลัง  element นั้นๆ
+replaceWith คือแทนที่มันเลย
+
+การใช้ Js ในการแก้ Clss style Inline  มันดีเพราะ Dynamic 
