@@ -1,0 +1,84 @@
+.boxAdd {
+  margin-top: 30px;
+  border: 2px solid black;
+  width: 400px;
+  height: 300px;
+  text-align: left;
+  padding:20px 30px;
+}
+
+div input {
+  width: 400px;
+  height: 30px;
+}
+
+div label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.boxAdd hr { 
+  margin:20px 0;
+}
+
+.button {
+    text-align: right;
+}
+
+.button button{
+    width: 50px;
+    height: 30px;
+}
+
+.listUpdate {
+    margin-top: 30px;
+    border: 2px solid black;
+    width: 400px;
+    text-align: left;
+    padding:20px 30px;
+}
+
+.totalAmount {
+    text-align: right;
+}
+
+.contentListUpdate ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contentListUpdate li {
+    width: 100%;
+    overflow: hidden;
+}
+
+.contentListUpdate li button {
+    margin-left: auto;
+}
+
+.contentListUpdate span {
+    display: inline-block;
+    margin-right: auto;
+}
+
+.contentListUpdate .dateList {
+    margin-left: 0; ;
+}
+
+.contentListUpdate .expendList {
+    margin-left: 20px; ;
+}
+
+.contentListUpdate .amountList {
+    margin-right: 15px;
+}
+
+.contentListUpdate .contentListUpdateRight {
+    float: right;
+}
+
+/* To Dom */
+.hide {
+    display: none;
+}
