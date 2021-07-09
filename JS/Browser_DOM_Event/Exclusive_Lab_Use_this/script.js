@@ -55,6 +55,9 @@ buttonAdd.addEventListener("click", function () {
     const amountToDeleteList =
       liToDelete.querySelector(".amountList").innerHTML;
 
+    // minus Del Value
+    total.innerHTML = +total.innerHTML - +amountToDeleteList;
+
     //  Search Index of Data In list
     let index = 0;
     for (let { expend, date, amount } of list) {
@@ -89,7 +92,6 @@ buttonAdd.addEventListener("click", function () {
     //Show/Hide Button
     buttonAdd.classList.toggle("hide");
     buttonSave.classList.toggle("hide");
-
 
     //Add Event On Save Button
     buttonSave.onclick = function () {
