@@ -4,15 +4,15 @@ function submmit() {
     alert("Form is submitted")
 }
 // DOM property
-const dom = document.getElementsByClassName('DOM')[0]
-console.log(dom)
-dom.onclick = () => {
+const form = document.querySelector('form')
+console.log(form)
+dom.onsubmit = () => {
     alert("Form is submitted")
 }
 // Event listener
-const el = document.getElementsByClassName('El')[0]
-console.log(el)
-el.addEventListener('click',submmit)
+const form1 = document.querySelector('form')
+console.log(form1)
+form1.addEventListener('click',submmit)
 
 
 // จงเขียนคำสั่งยกเลิก Event Handler
@@ -21,7 +21,7 @@ el.addEventListener('click',submmit)
 //     alert("Form is submitted")
 // }
 // DOM property
-dom.onclick = null;
+form.onsubmit = null;
 // Event listener
-console.log(el)
-el.removeEventListener('click',submmit)
+console.log(form1)
+form1.removeEventListener('click',submmit)

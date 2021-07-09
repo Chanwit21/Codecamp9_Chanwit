@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test_And_Learn_DOM_Browser_Even</title>
+  </head>
+  <body>
+    <input type="text" name="test" />
+    <button class="btn-click">Click</button>
+    <script>
+      const click = document.querySelector(".btn-click");
+      const input = document.querySelector("input");
+      click.addEventListener("click", function () {
+        alert("You are Hear");
+      });
+      input.addEventListener("keypress", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          click.click();
+          console.log(event.keyCode)
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive_Lab</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <center>
+        <div class="boxAdd">
+            <label for="expend">Expend</label><br>
+            <input type="text" name="expend" value=""/><br>
+            <label for="amout">Amount</label><br>
+            <input type="text" name="amount" value=""/><br>
+            <label for="date">Date</label><br>
+            <input type="date" name="date" value=""/><br>
+            <hr>
+            <div class="button">
+                <button>Add</button>
+            </div>
+        </div>
+        <div class="listUpdate">
+            <div class="totalAmount">
+                <h4>Total:<span>0</span></h2>
+            </div>
+            <hr>
+            <div class="contentListUpdate">
+                <ul>
+                    <li><span class="dateList">2021-07-01</span><span class="expendList">list </span>
+                        <div class="contentListUpdateRight">
+                            <span class="amountList">amonut </span><button>Del</button><button>Edit</button>
+                        </div>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </center>
+    <script src="./script.js"></script>
+</body>
+</html>

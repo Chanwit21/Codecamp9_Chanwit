@@ -4,4 +4,7 @@ const button = document.querySelector('button')
 console.log(button)
 button.addEventListener('click',()=>{
     button.remove()
+    button.style.display = "none";
+    button.hidden = true;
+    button.classList.add('hide')
 })

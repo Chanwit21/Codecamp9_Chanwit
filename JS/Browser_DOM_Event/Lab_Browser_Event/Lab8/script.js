@@ -6,9 +6,10 @@ let center = document.querySelector('center')
 console.log(center)
 hide.addEventListener('click',()=>{
     let text = document.querySelector('h1');
-    text.remove()
+    text.innerHTML = ""
 })
 
 show.addEventListener('click',()=>{
-    center.insertAdjacentHTML('beforeend', '<h1><b>Lorem, ipsum dolor.</b></h1>');
+    let text = document.querySelector('h1');
+    text.innerHTML = "Lorem, ipsum dolor."
 })

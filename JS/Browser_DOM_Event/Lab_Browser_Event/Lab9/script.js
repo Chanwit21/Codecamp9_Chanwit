@@ -6,7 +6,7 @@
 const button = document.querySelector('button');
 const inputTag = document.querySelector('input');
 let value = "";
-inputTag.addEventListener('change',(e)=>{
+inputTag.addEventListener('input',(e)=>{
     value = e.target.value
     let text = document.querySelector('p')
     if (value.length !== 0){
