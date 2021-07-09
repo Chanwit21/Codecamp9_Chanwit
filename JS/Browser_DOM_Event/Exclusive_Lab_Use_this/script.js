@@ -3,6 +3,7 @@ const amountInput = document.getElementsByName("amount")[0];
 const dateInput = document.getElementsByName("date")[0];
 const buttonAdd = document.querySelector(".button button");
 const buttonSave = document.querySelectorAll(".button button")[1];
+const total = document.querySelector(".totalAmount span");
 // console.log(buttonSave);
 const ul = document.querySelector(".contentListUpdate ul");
 let list = [];
@@ -15,7 +16,7 @@ function createElement(tagName, innerHtml, className) {
   return tag;
 }
 
-//Add Event Onbutton
+//Add Event OnbuttonAdd
 buttonAdd.addEventListener("click", function () {
   const li = createElement("li");
   const divAmountAndButton = createElement("div", "", "contentListUpdateRight");
@@ -25,7 +26,7 @@ buttonAdd.addEventListener("click", function () {
   const buttonEdit = createElement("button", "Edit");
   const buttonDel = createElement("button", "Del");
 
-  //Append To list And Clear Input And update ListArray
+  //Append To list / Clear Input / update ListArray and Update Total
   divAmountAndButton.append(spanAmount);
   divAmountAndButton.append(buttonEdit);
   divAmountAndButton.append(buttonDel);
@@ -33,13 +34,14 @@ buttonAdd.addEventListener("click", function () {
   li.append(spanExpend);
   li.append(divAmountAndButton);
   ul.append(li);
+  total.innerHTML = +total.innerHTML + +amountInput.value;
   let obj = {
     expend: expendInput.value,
     date: dateInput.value,
     amount: amountInput.value,
   };
   list = [...list, obj];
-  console.log(list);
+  // console.log(list);
   dateInput.value = "";
   expendInput.value = "";
   amountInput.value = "";
@@ -88,6 +90,8 @@ buttonAdd.addEventListener("click", function () {
     buttonAdd.classList.toggle("hide");
     buttonSave.classList.toggle("hide");
 
+
+    //Add Event On Save Button
     buttonSave.onclick = function () {
       //  Search Index of Data In list Old Value
       let index = 0;
@@ -101,12 +105,18 @@ buttonAdd.addEventListener("click", function () {
         index++;
       }
 
+      // minus old Value
+      total.innerHTML = +total.innerHTML - +amountToEditList.innerHTML;
+
       //Add Value To li element
       dateToEditList.innerHTML = dateInput.value;
       expendToEditList.innerHTML = expendInput.value;
       amountToEditList.innerHTML = amountInput.value;
       buttonAdd.classList.toggle("hide");
       buttonSave.classList.toggle("hide");
+
+      // Plus newValue Value
+      total.innerHTML = +total.innerHTML + +amountInput.value;
 
       //Update List
       if (index < list.length) {
