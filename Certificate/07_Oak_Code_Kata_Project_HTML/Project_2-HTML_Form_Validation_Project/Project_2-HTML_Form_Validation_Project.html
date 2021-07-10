@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 2 - HTML Form Validation Project</title>
+    <style>
+        h2 {
+            color: darkblue;
+        }
+
+        h3 {
+            color: dodgerblue;
+        }
+
+        div {
+            width: 580px;
+        }
+
+        .firstFieldset label {
+            margin-left: 50px;
+        }
+
+        .firstFieldset input {
+            margin: 10px 0;
+            width: 250px;
+        }
+
+        select {
+            width: 200px; 
+            margin-left: 50px;
+        }
+
+        #quantity {
+            width: 120px;
+        }
+
+        form button {
+            margin-left: 2px;
+            margin-top: 2px;
+        }
+
+        form p {
+            margin-top: 2px;
+            margin-left: 50px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>A Simple Form</h2>
+      <h3><i>Form Fundamentals</i></h3>
+      <form action="#">
+        <fieldset class="firstFieldset">
+          <legend>Customer info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" /><br />
+          <label for="telephone">Telephone:</label>
+          <input
+            type="text"
+            id="telephone"
+            placeholder="Pattren: 1-234-567-8910"
+          /><br />
+          <label for="email">Email address:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your email address"
+          /><br />
+        </fieldset>
+        <fieldset>
+          <legend>Books</legend>
+          <select name="book" id="book">
+              <option value="">Select</option>
+            <option value="aVinciCode">Da Vinci Code,The</option>
+            <option value="HP.AndTheDeathlyHallows">
+              Harry Potter and the Deathly Hallows
+            </option>
+            <option value="HP.AndThePhilosopherStone">
+              Harry Potter and the Philosopher's Stone
+            </option>
+            <option value="HP.AndTheOrderOfThePhoenix">
+              Harry Potter and the Order of the Phoenix
+            </option>
+            <option value="fiftyShadesOfGrey">Fifty Shades of Grey</option>
+            <option value="HP.AndTheGobletOfFire">
+              Harry Potter and the Goblet of Fire
+            </option>
+            <option value="HP.AndTheChamberOfSecrets">
+              Harry Potter and the Chamber of Secrets
+            </option>
+          </select>
+          <label for="quantity">Quantity (Maximum 5):</label>
+          <input type="number" id="quantity" min="1" max="5" />
+        </fieldset>
+        <button>Submit</button>
+        <p>&copy; 2011 Acme United. All rights reserved.</p>
+      </form>
+    </div>
+  </body>
+</html>
