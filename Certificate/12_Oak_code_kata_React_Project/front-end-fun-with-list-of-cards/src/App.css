@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* CardList */
+.row{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.col-sm-4 {
+  text-align: center;
+  width: 25rem;
+  margin: 0 20px;
+}
+
+
+/* Card */
+.card {
+  width: 25rem;
+  text-align: left;
+  display: inline-block;
+  border: 1px solid grey;
+  border-radius: 0.7rem;
+}
+
+.card-image {
+  border-radius: 0.7rem 0.7rem 0 0;
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
+}
+
+.card-title {
+  margin-left: 0.8rem;
+  font-size: 1.05rem;
+}
+
+.card-text {
+  margin-left: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.btn-inCard {
+  display: inline-block;
+  background-color: cornflowerblue;
+  width: 7rem;
+  height: 2rem;
+  margin-left: 0.8rem;
+  padding-top: 0.6rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+}

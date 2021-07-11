@@ -6,45 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 2 - HTML Form Validation Project</title>
     <style>
-        h2 {
-            color: darkblue;
-        }
+      h2 {
+        color: darkblue;
+      }
 
-        h3 {
-            color: dodgerblue;
-        }
+      h3 {
+        color: dodgerblue;
+      }
 
-        div {
-            width: 580px;
-        }
+      div {
+        width: 580px;
+      }
 
-        .firstFieldset label {
-            margin-left: 50px;
-        }
+      .firstFieldset label {
+        margin-left: 50px;
+      }
 
-        .firstFieldset input {
-            margin: 10px 0;
-            width: 250px;
-        }
+      .firstFieldset input {
+        margin: 10px 0;
+        width: 250px;
+      }
 
-        select {
-            width: 200px; 
-            margin-left: 50px;
-        }
+      select {
+        width: 200px;
+        margin-left: 50px;
+      }
 
-        #quantity {
-            width: 120px;
-        }
+      #quantity {
+        width: 120px;
+      }
 
-        form button {
-            margin-left: 2px;
-            margin-top: 2px;
-        }
+      form button {
+        margin-left: 2px;
+        margin-top: 2px;
+      }
 
-        form p {
-            margin-top: 2px;
-            margin-left: 50px;
-        }
+      form p {
+        margin-top: 2px;
+        margin-left: 50px;
+      }
+
+      input:required {
+        background-color: greenyellow;
+      }
+
+      input:out-of-range {
+        background-color: rgb(231, 87, 87);
+      }
 
     </style>
   </head>
@@ -56,24 +64,32 @@
         <fieldset class="firstFieldset">
           <legend>Customer info</legend>
           <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Enter your name" /><br />
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+            autofocus
+          /><br />
           <label for="telephone">Telephone:</label>
           <input
             type="text"
             id="telephone"
             placeholder="Pattren: 1-234-567-8910"
+            required
           /><br />
           <label for="email">Email address:</label>
           <input
             type="text"
             id="name"
             placeholder="Enter your email address"
+            required
           /><br />
         </fieldset>
         <fieldset>
           <legend>Books</legend>
           <select name="book" id="book">
-              <option value="">Select</option>
+            <option value="">Select</option>
             <option value="aVinciCode">Da Vinci Code,The</option>
             <option value="HP.AndTheDeathlyHallows">
               Harry Potter and the Deathly Hallows
