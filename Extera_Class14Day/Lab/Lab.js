@@ -1,3 +1,4 @@
+// IF Else
 // //Lab 1
 // const a = 10;
 // const b = 16;
@@ -86,26 +87,111 @@
 // }
 
 //Lab 10 
-let count = 1;
-let result = ''
-for(let i = 0; i < 5;i++){
-    for(let j = 0; j <= i;j++){
-        result += count + '\t';
-        count++
+// let count = 1;
+// let result = ''
+// for(let i = 0; i < 5;i++){
+//     for(let j = 0; j <= i;j++){
+//         result += count + '\t';
+//         count++
+//     }
+//     result += '\n'
+// }
+
+// console.log(result)
+
+// function draw(start, row) {
+//     let result = "";
+//     for (let i = 1; i <= row; i++) {
+//         for (let j = 1; j <= row; j++) {
+//             if (i >= j) result += `${start++}`;
+//         }
+//         result += "\n"
+//     }
+//     console.log(result);
+// }
+// draw(1, 5);
+
+
+// Function
+// Lab 1
+// function reverse(num){
+//     const str = ''+num;
+//     const arr = str.split('')
+//     return +arr.reverse().join('')
+// }
+
+// console.log(reverse(32243))
+
+//Lab 2
+// function หรม(num1,num2) {
+//     if(num1 > num2){
+//         [num1,num2] = [num2,num1]
+//     }
+//     let check = num1
+//     while(true){
+//         if (num1%check === 0 && num2%check === 0){
+//             break;
+//         }
+//         check--;
+//     }
+//     return check;
+// }
+
+// console.log(หรม(15,75))
+
+// function ครน(num1,num2) {
+//     if(num1 > num2){
+//         [num1,num2] = [num2,num1]
+//     }
+//     let check = num2;
+//     while(true){
+//         if (check%num1 === 0 && check%num2 === 0){
+//             break;
+//         }
+//         check++;
+//     }
+//     return check;
+// }
+// console.log(ครน(15,75))
+
+// Lab 3
+// const str = 'change my every first letter of this string to uppercase string'
+// function changeFirstOfStr(str) {
+//     const arrFromStr = str.split(' ')
+//     const result = [];
+//     for (let value of arrFromStr){
+//         result.push(value.slice(0,1).toUpperCase() + value.slice(1))
+//     }
+//     return result.join(' ');
+// }
+
+// console.log(changeFirstOfStr(str))
+
+// // Challenge
+// //1
+// function calChange(num){
+//     let obj = {}
+//     let arrOfCash = [500,100,50,20,10,5,1]
+//     let updateNumAfter = num;
+//     for(let value of arrOfCash){
+//         obj[""+value] = Math.floor(updateNumAfter/value)
+//         updateNumAfter -= Math.floor(updateNumAfter/value)*value;
+//     }
+//     return obj;
+// }
+
+// console.log(calChange(789))
+
+//2
+function calChange2(num,...arrOfCash){
+    let obj = {}
+    let updateNumAfter = num;
+    for(let value of arrOfCash){
+        obj[""+value] = Math.floor(updateNumAfter/value)
+        updateNumAfter -= Math.floor(updateNumAfter/value)*value;
     }
-    result += '\n'
+    return obj;
 }
 
-console.log(result)
+console.log(calChange2(789,500,100,20,1))
 
-function draw(start, row) {
-    let result = "";
-    for (let i = 1; i <= row; i++) {
-        for (let j = 1; j <= row; j++) {
-            if (i >= j) result += `${start++}`;
-        }
-        result += "\n"
-    }
-    console.log(result);
-}
-draw(1, 5);
