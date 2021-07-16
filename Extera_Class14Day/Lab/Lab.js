@@ -183,15 +183,52 @@
 // console.log(calChange(789))
 
 //2
-function calChange2(num,...arrOfCash){
-    let obj = {}
-    let updateNumAfter = num;
-    for(let value of arrOfCash){
-        obj[""+value] = Math.floor(updateNumAfter/value)
-        updateNumAfter -= Math.floor(updateNumAfter/value)*value;
+// function calChange2(num,...arrOfCash){
+//     let obj = {}
+//     let updateNumAfter = num;
+//     for(let value of arrOfCash){
+//         obj[""+value] = Math.floor(updateNumAfter/value)
+//         updateNumAfter -= Math.floor(updateNumAfter/value)*value;
+//     }
+//     return obj;
+// }
+
+// console.log(calChange2(789,500,100,20,1))
+
+
+//OBJECT
+// function User(name,weight,height) {
+//     this.name = name;
+//     this.weight = weight;
+//     this.height = height;
+//     this.bmi = function bmi() {
+//         return this.weight/(this.height/100)**2
+//     }
+// }
+
+// const bomb = new User('Bomb',63,171);
+// console.log(bomb);
+// console.log(bomb.bmi())
+
+
+let test = {
+    name : "name",
+    height : 171,
+    weight : 63,
+    calBmi : () => {
+        return this
     }
-    return obj;
 }
 
-console.log(calChange2(789,500,100,20,1))
-
+console.log(test.calBmi())
+function Admin(name,height,weight) {
+    this.name = name
+    this.height = height
+    this.weight = weight
+    this.calBmi =  () => {
+        return this
+    }
+}
+const may = new Admin('may',170,75)
+console.log(may)
+console.log(may.calBmi())
