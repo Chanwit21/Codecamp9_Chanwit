@@ -1,0 +1,123 @@
+/* PersonalProject */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
+
+/* Global */
+* {
+  font-family: "Dosis", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff6dd;
+}
+/* Link Tag */
+
+/* Logo */
+.navBar {
+  background-color: #abe3f3;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.Logo {
+  height: 60px;
+}
+
+.H-Logo {
+  display: inline-block;
+}
+
+.H-Logo img {
+  margin-bottom: 55px;
+  height: 40px;
+}
+
+.text-logo {
+  margin-top: -45px;
+  margin-left: -30px;
+  display: inline-block;
+}
+
+.text-logo img {
+  height: 150px;
+}
+
+/* nav Bar content */
+.nav-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  /* background-color: #2b91c5; */
+}
+
+.nav-content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  height: 100%;
+}
+
+li a {
+  padding: 18px 20px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  color: #43c466;
+}
+
+ul li:last-child {
+  margin-right: 10px;
+}
+
+li a:hover {
+  background-color: #688ce9;
+}
+
+/* Login Status */
+.login-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 40px;
+  width: 200px;
+  text-align: right;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #fff6dd;
+}
+
+.login-status p {
+  display: inline-block;
+}
+
+.userstatus-icon {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+.userstatus-icon img {
+  display: inline-block;
+  height: 30px;
+}
