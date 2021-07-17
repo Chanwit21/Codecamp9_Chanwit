@@ -6,10 +6,10 @@ function NavComponent() {
     return (
         <div>
             <nav className="navBar">
-            <div className="container">
+            <div className="navContainer">
               <div className="Logo">
                 <div className="H-Logo">
-                  <img src="../PIC/LOGO/h.png" alt="H_Logo" />
+                  <img src="../PIC/LOGO/h.png" alt="H_Logo"/>
                 </div>
                 <div className="text-logo">
                   <img

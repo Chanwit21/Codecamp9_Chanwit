@@ -1,0 +1,28 @@
+footer {
+  background-color: #abe3f3;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.footer-copyright {
+    margin-top: 13px;
+}
+
+.footer-copyright span{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.footer-copyright img{
+    height: 25px;
+    margin: 0 10px;
+    margin-bottom: -3px;
+}

@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import React from "react";
 import HomePage from "./Page/HomePage";
 import AboutPage from "./Page/AboutPage";
+import './Global.css'
 
 function App() {
 

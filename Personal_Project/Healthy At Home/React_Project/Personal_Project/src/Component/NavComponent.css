@@ -1,16 +1,8 @@
 /* PersonalProject */
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
 
-/* Global */
-* {
-  font-family: "Dosis", sans-serif;
-  padding: 0;
-  margin: 0;
-}
 
-body {
-  background-color: #fff6dd;
-}
+
 /* Link Tag */
 
 /* Logo */
@@ -21,7 +13,7 @@ body {
   height: 60px;
 }
 
-.container {
+.navContainer {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -75,12 +67,12 @@ li {
 }
 
 li a {
-  padding: 18px 20px;
+  padding: 11px 20px;
   display: block;
   text-align: center;
   text-decoration: none;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
   color: #43c466;
 }
 
