@@ -1,0 +1,105 @@
+.loginPage {
+  height: 73vh;
+}
+
+.loginPage .container {
+  /* border: 1px dashed black; */
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Background */
+.loginPage .login-form {
+  margin: 0 auto;
+  margin-top: 105px;
+  width: 784px;
+  height: 630px;
+  background: #ffffff;
+  border: 1px solid rgba(43, 144, 196, 0.5);
+  box-sizing: border-box;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+/* Logo */
+.loginPage .login-form .logo img:nth-child(1) {
+  position: absolute;
+  width: 66px;
+  margin-left: 286px;
+  margin-top: 90px;
+}
+
+.loginPage .login-form .logo img:nth-child(2) {
+  position: absolute;
+  margin-left: 290px;
+  margin-top: -10px;
+  width: 264px;
+}
+
+.loginPage .scope-form-login {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 160px;
+}
+
+.loginPage .scope-form-login label {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 30px;
+  color: #000000;
+  margin-top: 30px;
+}
+
+.loginPage .scope-form-login input {
+  width: 400px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid rgba(43, 144, 196, 0.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-top: 14px;
+}
+
+.loginPage .scope-form-login input[type="submit"] {
+  margin-left: 0;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+  width: 400px;
+  height: 60px;
+  background: #2b90c4;
+  border-radius: 10px;
+}
+
+.loginPage .scope-form-login p {
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+}
+
+.loginPage .scope-form-login p .fogot-password {
+  text-decoration: none;
+  color: #000000;
+}
+
+.loginPage .scope-form-login p .fogot-password:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.loginPage .scope-form-login p .register {
+    margin-left: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: #2b90c4;
+}
+
+.loginPage .scope-form-login p:nth-last-child(3) {
+  margin-top: 40px;
+}
+
+.loginPage .scope-form-login p:nth-last-child(1) {
+  text-align: center;
+  margin-top: 7px;
+}

@@ -8,7 +8,7 @@ function FooterComponent() {
         <div className="footerContainer">
           <div className="footer-copyright">
             <span>Fit At Home</span>
-            <img src="../PIC/Icon/copyright.png" alt="copyRight" />
+            <img src="./PIC/Icon/copyright.png" alt="copyRight" />
             <span>2021</span>
           </div>
         </div>

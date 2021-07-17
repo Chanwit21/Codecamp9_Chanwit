@@ -13,38 +13,38 @@
   height: 60px;
 }
 
-.navContainer {
+.navBar .navContainer {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   width: 80%;
 }
 
-.Logo {
+.navBar .Logo {
   height: 60px;
 }
 
-.H-Logo {
+.navBar .H-Logo {
   display: inline-block;
 }
 
-.H-Logo img {
+.navBar .H-Logo img {
   margin-bottom: 55px;
   height: 40px;
 }
 
-.text-logo {
+.navBar .text-logo {
   margin-top: -45px;
   margin-left: -30px;
   display: inline-block;
 }
 
-.text-logo img {
+.navBar .text-logo img {
   height: 150px;
 }
 
 /* nav Bar content */
-.nav-content {
+.navBar .nav-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,7 @@
   /* background-color: #2b91c5; */
 }
 
-.nav-content ul {
+.navBar .nav-content ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,12 +61,12 @@
   padding: 0;
 }
 
-li {
+.navBar li {
   display: inline-block;
   height: 100%;
 }
 
-li a {
+.navBar li a {
   padding: 11px 20px;
   display: block;
   text-align: center;
@@ -76,16 +76,16 @@ li a {
   color: #43c466;
 }
 
-ul li:last-child {
+.navBar ul li:last-child {
   margin-right: 10px;
 }
 
-li a:hover {
+.navBar li a:hover {
   background-color: #688ce9;
 }
 
 /* Login Status */
-.login-status {
+.navBar .login-status {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,17 +99,17 @@ li a:hover {
   background-color: #fff6dd;
 }
 
-.login-status p {
+.navBar .login-status p {
   display: inline-block;
 }
 
-.userstatus-icon {
+.navBar .userstatus-icon {
   display: inline-block;
   margin-right: 10px;
-  margin-top: 7px;
+  margin-top: 6px;
 }
 
-.userstatus-icon img {
+.navBar .userstatus-icon img {
   display: inline-block;
   height: 30px;
 }

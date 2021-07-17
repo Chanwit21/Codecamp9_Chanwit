@@ -1,4 +1,4 @@
-.trainer-card {
+.trainer-cardmini {
   /* border: 1px dashed black; */
   display: inline-block;
   width: 208px;
@@ -6,9 +6,10 @@
   background: #fff6dd;
   box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  margin-bottom: 30px;
 }
 
-.trainer-pic {
+.trainer-cardmini .trainer-picmini {
   background-size: cover;
   /* border: 1px dashed black; */
   margin: 11.2px 11.2px 0 11.2px;
@@ -16,16 +17,16 @@
   height: 187px;
 }
 
-.text-in-trainer-card {
+.trainer-cardmini .text-in-trainer-cardmini {
   text-align: center;
 }
 
-.text-in-trainer-card h1 {
+.trainer-cardmini .text-in-trainer-cardmini h1 {
   margin-top: 8.6px;
   font-size: 20px;
 }
 
-.text-in-trainer-card p {
+.trainer-cardmini .text-in-trainer-cardmini p {
   font-size: 18px;
   padding-bottom: 23px;
 }

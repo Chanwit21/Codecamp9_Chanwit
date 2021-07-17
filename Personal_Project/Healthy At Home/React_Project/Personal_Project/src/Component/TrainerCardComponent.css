@@ -8,7 +8,7 @@
   border-radius: 10px;
 }
 
-.trainer-pic {
+.trainer-card .trainer-pic {
   background-size: cover;
   /* border: 1px dashed black; */
   margin: 30px 30px 0 30px;
@@ -16,16 +16,16 @@
   height: 500px;
 }
 
-.text-in-trainer-card {
+.trainer-card .text-in-trainer-card {
   text-align: center;
 }
 
-.text-in-trainer-card h1 {
+.trainer-card .text-in-trainer-card h1 {
   margin-top: 23px;
   font-size: 50px;
 }
 
-.text-in-trainer-card p {
+.trainer-card .text-in-trainer-card p {
   font-size: 45px;
   margin-bottom: 23px;
 }

@@ -1,0 +1,57 @@
+.service-cardOdd {
+  /* border: 1px dashed black; */
+  display: flex;
+  width: 100%;
+  height: 856px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px 3px gray;
+}
+
+.service-cardOdd .content-in-servicecardOdd {
+  /* border: 1px dashed black; */
+  width: 50%;
+}
+
+.service-cardOdd .text-content-in-servicecardOdd {
+  /* border: 1px dashed black; */
+  margin-top: 270px;
+  margin-left: 73px;
+}
+
+.service-cardOdd .text-content-in-servicecardOdd h1 {
+  font-weight: 600;
+  font-size: 50px;
+  color: #000000;
+}
+
+.service-cardOdd .text-content-in-servicecardOdd p {
+  font-size: 40px;
+  color: #000000;
+}
+
+.service-cardOdd .text-content-in-servicecardOdd button {
+  width: 213px;
+  height: 56px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
+  background: #2b90c4;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.service-cardOdd .price-in-service-cardOdd {
+  font-weight: 600;
+  font-size: 30px;
+  color: #000000;
+  margin-top: 240px;
+}
+
+.service-cardOdd .img-in-servicecardOdd {
+  /* border: 1px dashed black; */
+  height: 100%;
+  width: 50%;
+  background-size: cover;
+  border-radius: 0 10px 10px 0;
+}

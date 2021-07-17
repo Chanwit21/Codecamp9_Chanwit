@@ -1,19 +1,21 @@
 /* Global */
-.container {
+.homepage-body .container {
   margin: 0 auto;
   width: 80%;
 }
 
 /* Section Promo */
-.promotion {
+.homepage-body .promotion {
+  width: 100%;
+  height: 93vh;
+  overflow: hidden;
+}
+
+.homepage-body .img-promo {
   width: 100%;
 }
 
-.img-promo {
-  width: 100%;
-}
-
-.arrow {
+.homepage-body .arrow {
   position: absolute;
   top: 50%;
   transform: translate(0%, -50%);
@@ -23,20 +25,20 @@
   filter: brightness(0) invert(1);
 }
 
-.arrow-right {
+.homepage-body .arrow-right {
   right: 10%;
 }
 
-.arrow-left {
+.homepage-body .arrow-left {
   left: 11%;
 }
 
 /* Section Result */
-.result {
+.homepage-body .result {
   margin-top: 43px;
 }
 
-.result-text {
+.homepage-body .result-text {
   width: 100%;
   font-weight: 600;
   font-size: 30px;
@@ -49,29 +51,29 @@
   margin-bottom: 43px;
 }
 
-.arrowResult {
+.homepage-body .arrowResult {
   height: 25px;
   width: 25px;
 }
 
-.resultImage {
+.homepage-body .resultImage {
   width: 40%;
 }
 
-.result-img {
+.homepage-body .result-img {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 /*  Section Trainer */
-.trainer-card-row {
+.homepage-body .trainer-card-row {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 157px;
 }
 
-.trainer-text {
+.homepage-body .trainer-text {
   width: 100%;
   font-weight: 600;
   font-size: 30px;
@@ -86,7 +88,7 @@
 
 
 /* Section Contact us */
-.horizental-line {
+.homepage-body .horizental-line {
   width: 100%;
   height: 10px;
   background: #2b90c4;

@@ -1,0 +1,117 @@
+.registerPage {
+  height: 74vh;
+}
+
+.registerPage .container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.registerPage .form-register {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 784px;
+  height: 664px;
+  background: #ffffff;
+  border: 1px solid rgba(43, 144, 196, 0.5);
+  box-sizing: border-box;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.registerPage .form-register h1 {
+  margin-left: 90px;
+  margin-top: 45px;
+  font-weight: 600;
+  font-size: 40px;
+  color: #000000;
+}
+
+.registerPage .row-head-of-form {
+  display: flex;
+}
+
+.registerPage .form-register .logo img:nth-child(1) {
+  position: absolute;
+  margin-left: 76px;
+  margin-top: 40px;
+  width: 66px;
+}
+
+.registerPage .form-register .logo img:nth-child(2) {
+  position: absolute;
+  margin-top: -60px;
+  margin-left: 78px;
+  width: 264px;
+}
+
+.registerPage .scope-register-form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.registerPage .form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.registerPage .form-row label {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.registerPage .form-row input {
+  width: 293px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid rgba(43, 144, 196, 0.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.registerPage .form-row input[type="email"] {
+  width: 600px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid rgba(43, 144, 196, 0.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.registerPage input[type="submit"] {
+    margin-top: 35px;
+  width: 600px;
+  height: 50px;
+  background: #2b90c4;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 0;
+}
+
+.registerPage .form-register p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+  margin-top: 30px;
+}
+
+.registerPage .form-register p a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #2B90C4;
+    margin-left: 15px;
+}
+
+.registerPage .form-register p a:hover {
+    text-decoration: underline;
+}

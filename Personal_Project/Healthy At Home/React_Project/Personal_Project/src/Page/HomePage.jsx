@@ -15,17 +15,17 @@ function HomePage() {
         <section className="promotion">
           <div className="container">
             <img
-              src="../PIC/Icon/left-arrow.png"
+              src="./PIC/Icon/left-arrow.png"
               alt="left-arrow"
               className="arrow arrow-left"
             />
             <img
-              src="../PIC\Picxel\PIC_Promo\pexels-william-choquette-1954524.jpg"
+              src="./PIC\Picxel\PIC_Promo\pexels-william-choquette-1954524.jpg"
               alt="run-promo"
               className="img-promo"
             />
             <img
-              src="../PIC/Icon/right-arrow.png"
+              src="./PIC/Icon/right-arrow.png"
               alt="right-arrow"
               className="arrow arrow-right"
             />
@@ -38,17 +38,17 @@ function HomePage() {
             </div>
             <div className="result-img">
               <img
-                src="../PIC/Icon/left-arrow.png"
+                src="./PIC/Icon/left-arrow.png"
                 alt="left-arrow"
                 className="arrowResult"
               />
               <img
-                src="../PIC/Picxel/PIC_Result/pexels-karolina-grabowska-4498516.jpg"
+                src="./PIC/Picxel/PIC_Result/pexels-karolina-grabowska-4498516.jpg"
                 alt="result1"
                 className="resultImage"
               />
               <img
-                src="../PIC/Icon/right-arrow.png"
+                src="./PIC/Icon/right-arrow.png"
                 alt="right-arrow"
                 className="arrowResult"
               />
@@ -63,12 +63,12 @@ function HomePage() {
             <Link to='/trainerpage' style={{textDecoration:"none",color:"black"}}>
             <div className="trainer-card-row">
               <TrainerCardComponent 
-              pathOfImg = '../PIC/Trainer/pexels-andrew-dick-733500.jpg'
+              pathOfImg = './PIC/Trainer/pexels-andrew-dick-733500.jpg'
               nickName = "Trainer Ball"
               Fullname = "Suthep Prabkeaw"
               />
               <TrainerCardComponent 
-              pathOfImg = '../PIC/Trainer/pexels-thisisengineering-3912944.jpg'
+              pathOfImg = './PIC/Trainer/pexels-thisisengineering-3912944.jpg'
               nickName = "Trainer Job"
               Fullname = "Thanapob SingHaseanee"
               />
@@ -86,9 +86,7 @@ function HomePage() {
       </div>
       {/* Space Bottom */}
       <div style={{ marginBottom: "40px" }}></div>
-      <div>
         <FooterComponent />
-      </div>
     </div>
   );
 }

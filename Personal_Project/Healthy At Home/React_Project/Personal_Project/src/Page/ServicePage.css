@@ -1,0 +1,133 @@
+.service-page .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.service-page .service-program {
+  margin-top: 35px;
+}
+
+.service-page .odd-section-of-secvice-card {
+  margin-bottom: 70px;
+}
+
+.service-page .even-section-of-secvice-card {
+  margin-bottom: 70px;
+}
+
+/* Form */
+.service-page .form-consultant h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 50px;
+  color: #43c466;
+  padding-top: 50px;
+}
+
+.service-page .form-to-decide {
+  margin: 40px auto;
+  width: 1516px;
+  height: 862px;
+  background: #ffffff;
+  box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.service-page .form-to-decide img:first-child {
+  margin-top: 40px;
+  position: absolute;
+  left: 47%;
+  transform: translate(-50%, 0%);
+  /* bottom: 0%; */
+  width: 50px;
+}
+
+.service-page .form-to-decide img:nth-child(2) {
+  margin-top: -40px;
+  position: absolute;
+  left: 51%;
+  transform: translate(-50%, 0%);
+  /* bottom: 0%; */
+  width: 211px;
+}
+
+.service-page .form-to-decide h1 {
+  padding-top: 120px;
+  font-weight: 600;
+  font-size: 50px;
+  color: #000000;
+}
+
+.service-page .form-to-decide form label {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 28px;
+  color: #000000;
+}
+
+.service-page .form-to-decide form input {
+  display: inline-block;
+  width: 384px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #2b90c4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-left: 25px;
+}
+
+.service-page .fullname-form-consultant {
+  margin-left: 200px;
+}
+
+.service-page .fullname-form-consultant label:nth-child(3) {
+  margin-left: 57px;
+}
+
+.service-page .weight-hight-form-consultant {
+  margin-left: 233px;
+}
+
+.service-page .weight-hight-form-consultant label:nth-child(3) {
+  margin-left: 94px;
+}
+
+.service-page .email-form-consultant {
+  margin-left: 249px;
+}
+
+.service-page .email-form-consultant input {
+  width: 972px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #2b90c4;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.service-page .additional-form-consultant {
+  display: flex;
+  margin-left: 130px;
+  margin-top: 40px;
+}
+
+.service-page .additional-form-consultant textarea {
+  width: 972px;
+  height: 199px;
+  background: #ffffff;
+  border: 1px solid #2b90c4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-left: 25px;
+}
+
+.service-page .form-to-decide form input[type="submit"] {
+  width: 176px;
+  height: 60px;
+  margin-left: 1150px;
+  margin-top: 25px;
+  background: #2b90c4;
+  color: #ffffff;
+  border-radius: 10px;
+}

@@ -1,19 +1,24 @@
+.trainer-page .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 /* Head Of Trainer Text */
-.head-trainer-text h1 {
+.trainer-page .head-trainer-text h1 {
   text-align: center;
   font-weight: 600;
   font-size: 50px;
   color: #43c466;
-  margin-top: 83px;
+  margin-top: 75px;
   margin-bottom: 30px;
 }
 
-.trainer-cardrow-trainerpage {
+.trainer-page .trainer-cardrow-trainerpage {
     margin-top: 40px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.contact-us {
-    margin-top: 60px;
+.trainer-page .contact-us {
+    margin-top: 80px;
 }

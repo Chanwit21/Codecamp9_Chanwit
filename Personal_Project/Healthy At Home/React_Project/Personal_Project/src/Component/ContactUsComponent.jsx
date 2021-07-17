@@ -17,6 +17,8 @@ function ContactUsComponent() {
           </div>
         </div>
         <div className="contact-us-form">
+          <img src="./PIC/LOGO/h.png" alt="H-LOGO" />
+          <img src="./PIC\LOGO\He__2_-removebg-preview.png" alt="H-LOGO" />
           <form action="#">
             <div className="label">
               <label htmlFor="firstname">Firstname : </label>
