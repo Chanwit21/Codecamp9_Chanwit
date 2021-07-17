@@ -1,0 +1,31 @@
+/* Global */
+/* .about-page {
+  height: 90vh;
+} */
+
+.container {
+  width: 80%;
+}
+
+.main-text {
+  width: 100%;
+  margin-top: 42px;
+  text-align: center;
+}
+
+.main-text h1 {
+  font-weight: 600;
+  font-size: 50px;
+  color: #43c466;
+  margin-bottom: 53px;
+}
+
+.main-text p {
+  display: inline-block;
+  width: 1150px;
+  text-align: left;
+  font-weight: normal;
+  font-size: 25px;
+  color: #000000;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,133 @@
+/* Contact us text */
+.contact-us-text {
+    width: 550px;
+  }
+  
+  .contact-us-text h1 {
+    width: 263px;
+    height: 113px;
+    font-weight: 600;
+    font-size: 50px;
+    color: #43c466;
+    margin-left: 40px;
+  }
+  
+  .contact-us-text p {
+    margin-left: 70px;
+    width: 400px;
+    height: 65px;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+  }
+  
+  .contact-us-img{
+      margin-left: 70px;
+  }
+  
+  .contact-us-text img {
+      margin-right: 13px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Contact  Us Form */
+  .contact-us-content {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px dashed black; */
+    margin-top: 40px;
+  }
+  
+  /* .contact-us-text {
+    border: 1px dashed black;
+  } */
+  
+  .contact-us-form {
+    /* border: 1px dashed black; */
+    background: #ffffff;
+    box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 941px;
+    height: 559px;
+  }
+  
+  .contact-us-form .label {
+    margin-top: 33px;
+    margin-left: 23px;
+    display: inline-block;
+    /* border: 1px dashed black; */
+    font-weight: 600;
+    font-size: 28px;
+    text-align: right;
+    margin-right: 25px;
+    position: absolute;
+  }
+  
+  .contact-us-form .label label:nth-child(1) {
+    display: inline-block;
+    padding-top: 9px;
+  }
+
+  .contact-us-form .label label:nth-child(3) {
+    display: inline-block;
+    margin-top: 58px;
+  }
+
+  .contact-us-form .label label:nth-child(5) {
+    display: inline-block;
+    margin-top: 61px;
+  }
+
+  .contact-us-form .label label:nth-child(7) {
+    display: inline-block;
+    margin-top: 47px;
+  }
+
+  
+  .contact-us-form .input {
+    display: inline-block;
+    /* border: 1px dashed black; */
+    text-align: left;
+    margin-top: 32px;
+    margin-left: 280px;
+  }
+  
+  .contact-us-form .input input {
+    display: inline-block;
+    margin-bottom: 35px;
+    width: 384px;
+    height: 60px;
+    background: #ffffff;
+    border: 1px solid #2b90c4;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .contact-us-form .input input#email {
+    width: 635px;
+    height: 60px;
+  }
+  
+  .contact-us-form .input textarea {
+    width: 635px;
+    height: 153px;
+    background: #ffffff;
+    border: 1px solid #2b90c4;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  input[type="submit"] {
+    margin-top: 16px;
+    margin-left: 23px;
+    width: 895px;
+    height: 50px;
+    background: #2b90c4;
+    border-radius: 10px;
+    box-shadow: none;
+    font-weight: 600;
+    font-size: 30px;
+    color: #ffffff;
+  }
+  
