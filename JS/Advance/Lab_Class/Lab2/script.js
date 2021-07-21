@@ -9,7 +9,7 @@ class Sale {
         this.type = "Drink"
     };
     calcPrice () {
-        let discountNum = 1-this.discount.slice(0,discount.length-1)/100
+        let discountNum = 1-this.discount.slice(0,this.discount.length-1)/100
         // console.log(discount.slice(0,discount.length-1));
         return this.amount*this.price*(discountNum)
     }
