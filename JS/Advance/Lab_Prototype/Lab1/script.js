@@ -23,5 +23,24 @@ Array.prototype.max = function () {
         return accumulator;
     },0);
 };
-console.log([1,2,3,4,500,6,7,8,9,10,100].max())
+[1,2,3,4,500,6,7,8,9,10,100].max()
 console.log([10,20,30,40,52,45,354,4,513,].max())
+
+class Test {
+    constructor(arr){
+        this.ar = arr;
+    }
+    
+    max(arr) {
+        
+    }
+}
+
+Test.prototype.max = function () {
+    return this.reduce((accumulator,currentvalue,index) => {
+        if (index === 0) return currentvalue;
+        if (currentvalue > accumulator) return currentvalue;
+        return accumulator;
+    },0);
+};
+[1,2,3,4,500,6,7,8,9,10,100].max()
