@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Single Page Application</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+        // สร้าง Element ผ่าน JS จะดีกว่า Fix ใน HTML เลยในเรื่อง performance
+      const rootElement = document.getElementById("root");
+      const input = document.createElement("input");
+      input.type = "text";
+      rootElement.append(input);
+      const button = document.createElement("button");
+      button.innerHTML = "Add";
+      rootElement.append(button);
+
+      button.addEventListener("click", () => {
+        const h1 = document.createElement("h1");
+        h1.innerHTML = "Hello World";
+        rootElement.innerHTML = "";
+        rootElement.append(h1);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab1 Intro to React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script>
+      const friendList = ['Jay', 'Bam', 'Boy' ]                 //สร้าง Friend List
+      function createElement(tag,props,value){                //แบบสร้างฟังก์ชัน
+        return React.createElement(tag, props, value)         //แบบสร้างฟังก์ชัน
+      }                                                       //แบบสร้างฟังก์ชัน
+      const rootElement = document.querySelector("#root");
+      const element = React.createElement(
+        "div",
+        {},
+        React.createElement("h1", {}, "Hello My Friend"),
+        React.createElement("p", {}, "Friend List"),
+        React.createElement(
+          "ul",
+          {},
+          // ...friendList.map(item => createElement('li', {}, item) )                // แบบสร้างฟังก์ชัน
+          ...friendList.map(item => (()=>React.createElement('li', {}, item))() )     // แบบ Function ที่เรียกใช้ทันที(IIFE)
+          // React.createElement("li", {}, "Jay"),
+          // React.createElement("li", {}, "Boy"),
+          // React.createElement("li", {}, "Bam")
+        )
+      );
+      ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>
