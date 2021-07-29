@@ -17,18 +17,17 @@ import "./App.css";
 //   )
 // }
 
-// LAB2
+// // LAB2
 // function App() {
 //   const provinceDistric = {
 //     bangkok: ["sathorn", "chatuchak"],
 //     samutprakarn: ["bangpree", "bangboor"],
 //     yala: ["batong", "meung"],
 //   };
-//   let selected = ''
-//   let optionDistric = []
+//   let districArray = [];
 
 //   function setSelectProvince(e) {
-//     selected = e.target.value
+//     let selected = e.target.value
 //     optionDistric = createOptionDistric();
 //     const selectDistric = document.querySelectorAll('select')[1]
 //     selectDistric.innerHTML = `<option value="">-</option>`;
@@ -38,7 +37,7 @@ import "./App.css";
 //       option.value = val
 //       selectDistric.append(option)
 //     }
-//     console.log(selectDistric)
+//     // console.log(selectDistric)
 //   }
 
 //   function createOptionDistric() {
@@ -52,11 +51,7 @@ import "./App.css";
 //   return (
 //     <div className="Lab2">
 //       <label htmlFor="province">Province: </label>
-//       <select
-//       name="province"
-//       id="province"
-//       onChange={setSelectProvince}
-//       >
+//       <select name="province" id="province" onChange={setSelectProvince}>
 //         <option value="">-</option>
 //         {Object.keys(provinceDistric).map((item) => {
 //           return <option value={item}>{item}</option>;
@@ -113,15 +108,20 @@ import "./App.css";
 
 // LAB4
 function App() {
+  const listArray = [];
   function addTodo() {
     const ulTagList = document.querySelector(".list-order");
     const inputAdd = document.querySelector("input");
     const textToUpdateList = inputAdd.value;
-    const liToUpdate = createLi(textToUpdateList);
-    // console.log(liToUpdate)
-    if (textToUpdateList) {
-      ulTagList.append(liToUpdate);
-      document.querySelector("input").value = "";
+    listArray.push(textToUpdateList);
+    ulTagList.innerHTML = '';
+    for (let val of listArray) {
+      if (val) {
+        const liToUpdate = createLi(val);
+        ulTagList.append(liToUpdate);
+        document.querySelector("input").value = "";
+        // console.log(listArray.indexOf(val))
+      }
     }
   }
 
@@ -149,7 +149,11 @@ function App() {
     //Add Event Button Del
     btnDelTag.addEventListener("click", function () {
       const liTagToDel = this.parentElement;
+      const textToDelete = this.parentElement.querySelector('span').innerHTML
+      const indexToDel = listArray.indexOf(textToDelete)
+      listArray.splice(indexToDel,1)
       liTagToDel.remove();
+      console.log(listArray)
     });
 
     //Add Event Button Edit
@@ -158,6 +162,7 @@ function App() {
       const liTagToEdit = this.parentElement;
       const spanTagToEdit = this.previousElementSibling;
       const textToEdit = spanTagToEdit.innerHTML;
+      const indexToEdit = listArray.indexOf(textToEdit)
       const inputEdit = creatTag("input");
       inputEdit.value = textToEdit;
       const saveButton = creatTag("button", "Save", "btn btn-save");
@@ -167,10 +172,12 @@ function App() {
         const inputToSave = this.previousElementSibling;
         const textToSave = inputToSave.value;
         spanTagToEdit.innerHTML = textToSave;
+        listArray[indexToEdit] = textToSave;
         inputToSave.remove();
         saveButton.remove();
         spanTagToEdit.style.display = "";
         editButton.style.display = "";
+        console.log(listArray)
       };
 
       liTagToEdit.prepend(saveButton);
