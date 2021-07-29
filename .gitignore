@@ -2,3 +2,4 @@
 *.xlsx
 *.docx
 *.txt
+node_modules*
