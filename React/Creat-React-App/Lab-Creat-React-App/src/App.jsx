@@ -190,6 +190,7 @@ function App() {
   return (
     <div className="App">
       <div style={{ textAlign: "center" }}>
+        <h1>To Do List</h1>
         <input type="text" />
         <button className="btn btn-add" onClick={addTodo}>
           Add

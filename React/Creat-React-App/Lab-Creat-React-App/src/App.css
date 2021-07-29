@@ -69,6 +69,13 @@ button {
 li {
   display: flex;
   justify-content: space-between;
+  margin-top: 12px;
+}
+
+li input {
+  width: 70%;
+  display: inline-block;
+  text-align: left;
 }
 
 input {
