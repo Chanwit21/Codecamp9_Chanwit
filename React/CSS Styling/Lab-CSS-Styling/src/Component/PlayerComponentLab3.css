@@ -1,0 +1,17 @@
+.player {
+  width: 30%;
+  height: 300px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.player .player-name {
+  width: 100%;
+  font-size: 30px;
+}
+
+.player .player-score {
+  width: 100%;
+  font-size: 80px;
+  font-weight: 500;
+}
