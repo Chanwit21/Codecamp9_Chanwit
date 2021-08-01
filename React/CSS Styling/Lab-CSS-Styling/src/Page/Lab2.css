@@ -1,0 +1,32 @@
+/* Lab2 */
+.lab2 {
+  display: block;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.lab2 .btn {
+  margin-left: 10px;
+}
+
+.lab2 ul {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.lab2 li {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lab2 .toggle {
+  text-decoration: line-through;
+  color: green;
+}
+
+.lab2 span:hover {
+  cursor: pointer;
+}

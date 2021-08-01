@@ -1,0 +1,54 @@
+/* Lab4 */
+.lab4 {
+  width: 100%;
+}
+
+/* Lab4 Nav Bar */
+.lab4 nav {
+  background-color: crimson;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.lab4 nav .logo {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.lab4 nav .search-and-add {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lab4 nav .search-and-add input {
+  min-height: 30px;
+  min-width: 200px;
+  border-radius: 5px;
+}
+
+.lab4 nav .search-and-add .btn {
+  width: 60px;
+  margin-left: 5px;
+  background-color: inherit;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.lab4 nav .search-and-add .btn:hover {
+  color: black;
+  background-color: #fff;
+}
+
+/* Lab4  Section Todo-Doing-Done*/
+.lab4 .todo-doing-done {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}

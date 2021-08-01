@@ -1,0 +1,25 @@
+/* Lab1 */
+.lab1 {
+  display: flex;
+  width: 18%;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 50px;
+  margin-top: 50px;
+}
+
+.lab1 h1 {
+  display: inline-block;
+  height: 50px;
+  margin: 0;
+}
+
+.lab1 .btn {
+  width: 50px;
+  height: 40px;
+  font-size: 25px;
+}
+
+.lab1 .btn-reset {
+  width: 80px;
+}
