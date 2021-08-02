@@ -10,12 +10,15 @@ function Lab3() {
   const [currentPlayer, setCurrentPlayer] = useState("Player1");
   const [winText, setWinText] = useState("");
   const [check, setCheck] = useState(false);
+  const [pointerEvent, setPoiterEvent] = useState("");
 
   function newGame() {
     setScorePlayer1(0);
     setScorePlayer2(0);
     setRandomNumber(1);
     setRoundScore(0);
+    setWinText("");
+    setPoiterEvent("");
   }
 
   function roll() {
@@ -47,11 +50,13 @@ function Lab3() {
 
   if (check) {
     let text = "";
-    if (scorePlayer1 >= 10) {
+    if (scorePlayer1 >= 100) {
       text = "Payer1 Win";
+      setPoiterEvent("none");
     }
-    if (scorePlayer2 >= 10) {
+    if (scorePlayer2 >= 100) {
       text = "Payer2 Win";
+      setPoiterEvent("none");
     }
     setWinText(text);
     setCheck(false);
@@ -73,10 +78,22 @@ function Lab3() {
           />
           <div className="game-control">
             <div className="row-button">
-              <button className="btn btn-roll" onClick={() => roll()}>
+              <button
+                className="btn btn-roll"
+                style={{
+                  pointerEvents: pointerEvent,
+                }}
+                onClick={() => roll()}
+              >
                 Roll
               </button>
-              <button className="btn btn-keep" onClick={() => keep()}>
+              <button
+                className="btn btn-keep"
+                style={{
+                  pointerEvents: pointerEvent,
+                }}
+                onClick={() => keep()}
+              >
                 Keep
               </button>
             </div>
@@ -91,7 +108,7 @@ function Lab3() {
             active={currentPlayer === "Player2" ? true : false}
           />
         </section>
-        <section className="wintext">
+        <section className="win-text">
           <h2>{winText}</h2>
         </section>
       </div>

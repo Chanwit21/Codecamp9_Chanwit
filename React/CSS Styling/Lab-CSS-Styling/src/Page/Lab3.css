@@ -81,3 +81,20 @@
   background-color: rgb(66, 175, 66);
   color: #fff;
 }
+
+.lab3 .win-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 40px;
+  font-weight: 900;
+  color: green;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.no_drop:hover {
+  cursor: no-drop;
+}
