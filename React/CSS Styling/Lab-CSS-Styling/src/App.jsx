@@ -12,11 +12,11 @@ import Lab4_2 from "./Page/Lab4_2";
 function App() {
   return (
     <div>
-      {/* <Lab1 />
-      <Lab2 />
+      {/* <Lab1 /> */}
+      {/* <Lab2 /> */}
       <Lab3 />
-      <Lab4_1 /> */}
-      <Lab4_2 />
+      {/* <Lab4_1 /> */}
+      {/* <Lab4_2 /> */}
     </div>
   );
 }

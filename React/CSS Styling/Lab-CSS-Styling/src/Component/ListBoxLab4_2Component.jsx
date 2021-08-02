@@ -30,10 +30,12 @@ function ListBoxLab4_2Component({ header, list, setList, arrayButton }) {
   // Save Button
   function saveEditList(id) {
     const textToUpdate = textToEdit;
-    const filterToEdit = list.filter(item => item.id === id);
-    const filterToUpdate = list.filter(item => item.id !== id);
+    const cloneToUpdate = [...list];
+    const index = cloneToUpdate.findIndex(list => list.id === id);
+    // const filterToEdit = list.filter(item => item.id === id);
+    // const filterToUpdate = list.filter(item => item.id !== id);
     //เพื่อให้ Copy By Ref
-    const objToUpdate = filterToEdit[0];
+    const objToUpdate = cloneToUpdate[index];
     if (objToUpdate.list !== textToUpdate) {
       objToUpdate.list = textToUpdate;
       // Update Dete When Save
@@ -42,9 +44,8 @@ function ListBoxLab4_2Component({ header, list, setList, arrayButton }) {
         thisDate.getMonth() + 1
       }/${thisDate.getFullYear()}`;
       objToUpdate.date = date;
-      filterToUpdate.push(objToUpdate);
       // console.log(thisDate);
-      setList(filterToUpdate);
+      setList(cloneToUpdate);
     }
     setTextToEdit("");
 

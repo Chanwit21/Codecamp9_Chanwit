@@ -5,31 +5,56 @@ import PlayerComponentLab3 from "../Component/PlayerComponentLab3";
 function Lab3() {
   const [scorePlayer1, setScorePlayer1] = useState(0);
   const [scorePlayer2, setScorePlayer2] = useState(0);
-  const [randomNumber, setRandomNumber] = useState(0);
+  const [randomNumber, setRandomNumber] = useState(1);
   const [roundScore, setRoundScore] = useState(0);
-  const [rollStatus, setRollStatus] = useState(false);
+  const [currentPlayer, setCurrentPlayer] = useState("Player1");
+  const [winText, setWinText] = useState("");
+  const [check, setCheck] = useState(false);
 
   function newGame() {
     setScorePlayer1(0);
     setScorePlayer2(0);
-    setRandomNumber(0);
+    setRandomNumber(1);
     setRoundScore(0);
-    setRollStatus(false);
-  }
-
-  if (rollStatus) {
-    setTimeout(() => {
-      let random = Math.floor(Math.random() * 7);
-      setRandomNumber(random);
-    }, 1);
   }
 
   function roll() {
-    setRollStatus(true);
+    let random = Math.floor(Math.random() * 6) + 1;
+    if (random !== 1) {
+      setRandomNumber(random);
+      setRoundScore(currentScore => currentScore + random);
+    } else {
+      setCurrentPlayer(currentPlayer =>
+        currentPlayer === "Player1" ? "Player2" : "Player1"
+      );
+      setRandomNumber(1);
+      setRoundScore(0);
+    }
   }
 
   function keep() {
-    setRollStatus(false);
+    const round_score = roundScore;
+    currentPlayer === "Player1"
+      ? setScorePlayer1(currentScore => currentScore + round_score)
+      : setScorePlayer2(currentScore => currentScore + round_score);
+    setCurrentPlayer(currentPlayer =>
+      currentPlayer === "Player1" ? "Player2" : "Player1"
+    );
+    setRandomNumber(1);
+    setRoundScore(0);
+    setCheck(true);
+  }
+
+  if (check) {
+    let text = "";
+    if (scorePlayer1 >= 10) {
+      text = "Payer1 Win";
+    }
+    if (scorePlayer2 >= 10) {
+      text = "Payer2 Win";
+    }
+    setWinText(text);
+    setCheck(false);
   }
 
   return (
@@ -43,8 +68,8 @@ function Lab3() {
         <section className="game">
           <PlayerComponentLab3
             playerName="Player 1"
-            score={"0"}
-            backgroundColor="pink"
+            score={scorePlayer1}
+            active={currentPlayer === "Player1" ? true : false}
           />
           <div className="game-control">
             <div className="row-button">
@@ -58,13 +83,16 @@ function Lab3() {
             <div className="row-number">
               <h1>{randomNumber}</h1>
             </div>
-            <h2>Round Score : 0</h2>
+            <h2>Round Score : {roundScore}</h2>
           </div>
           <PlayerComponentLab3
             playerName="Player 2"
-            score={"1"}
-            backgroundColor="white"
+            score={scorePlayer2}
+            active={currentPlayer === "Player2" ? true : false}
           />
+        </section>
+        <section className="wintext">
+          <h2>{winText}</h2>
         </section>
       </div>
     </div>
