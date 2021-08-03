@@ -8,15 +8,17 @@ function Lab6() {
   };
   const [district, setDistrict] = useState([]);
   const [provinceSelected, setProvinceSelected] = useState("");
+  const [districtSelected, setDistrictSelected] = useState("");
 
   function handleProvince(e) {
-    setProvinceSelected(e.target.value);
-    const provinceSelected = e.target.value;
-    if (provinceSelected) {
-      setDistrict(provinceDistrict[provinceSelected]);
+    const provinceSelectedValue = e.target.value;
+    if (provinceSelectedValue) {
+      setDistrict(provinceDistrict[provinceSelectedValue]);
     } else {
       setDistrict([]);
     }
+    setProvinceSelected(e.target.value);
+    setDistrictSelected("");
   }
 
   function convertArrayToOption(array) {
@@ -40,10 +42,17 @@ function Lab6() {
         {convertArrayToOption(Object.keys(provinceDistrict))}
       </select>
       <label htmlFor="dictrict">Dictrict :</label>
-      <select name="dictrict" id="dictrict">
+      <select
+        name="dictrict"
+        id="dictrict"
+        value={districtSelected}
+        onChange={e => setDistrictSelected(e.target.value)}
+      >
         <option value="">-</option>
         {convertArrayToOption(district)}
       </select>
+      <h2>Province : {provinceSelected}</h2>
+      <h2>District : {districtSelected}</h2>
     </div>
   );
 }

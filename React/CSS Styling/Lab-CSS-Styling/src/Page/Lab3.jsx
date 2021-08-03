@@ -9,7 +9,8 @@ function Lab3() {
   const [roundScore, setRoundScore] = useState(0);
   const [currentPlayer, setCurrentPlayer] = useState("Player1");
   const [winText, setWinText] = useState("");
-  const [check, setCheck] = useState(false);
+  const [checkWin, setCheckWin] = useState(false);
+  // เอาไว้ห้าม Click เมื่อจบเกมส์
   const [pointerEvent, setPoiterEvent] = useState("");
 
   function newGame() {
@@ -45,10 +46,10 @@ function Lab3() {
     );
     setRandomNumber(1);
     setRoundScore(0);
-    setCheck(true);
+    setCheckWin(true);
   }
 
-  if (check) {
+  if (checkWin) {
     let text = "";
     if (scorePlayer1 >= 100) {
       text = "Payer1 Win";
@@ -59,7 +60,7 @@ function Lab3() {
       setPoiterEvent("none");
     }
     setWinText(text);
-    setCheck(false);
+    setCheckWin(false);
   }
 
   return (
@@ -108,9 +109,11 @@ function Lab3() {
             active={currentPlayer === "Player2" ? true : false}
           />
         </section>
-        <section className="win-text">
-          <h2>{winText}</h2>
-        </section>
+        {winText ? (
+          <section className="win-text">
+            <h2>{winText}</h2>
+          </section>
+        ) : null}
       </div>
     </div>
   );

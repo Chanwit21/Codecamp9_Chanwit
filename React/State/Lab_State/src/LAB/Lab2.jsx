@@ -8,6 +8,7 @@ function Lab2() {
   };
 
   let classed = hide ? "hide" : "";
+
   return (
     <div>
       <button onClick={handleClick}>Click To Hide Text</button>

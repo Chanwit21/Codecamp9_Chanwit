@@ -1,0 +1,36 @@
+/* Lab5 */
+.lab5 {
+  display: block;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.lab5 .btn {
+  margin-left: 10px;
+}
+
+.lab5 ul {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.lab5 li {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lab5 .toggle {
+  text-decoration: line-through;
+  color: green;
+}
+
+.lab5 span:hover {
+  cursor: pointer;
+}
+
+.lab5 .search_box {
+  margin-top: 20px;
+}

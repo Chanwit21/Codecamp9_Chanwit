@@ -4,6 +4,8 @@ import "./ListBoxLab4_2Component.css";
 function ListBoxLab4_2Component({ header, list, setList, arrayButton }) {
   const listFilter = list.filter(item => item.status === header);
   const [textToEdit, setTextToEdit] = useState("");
+  const [editStatus, setEditStatus] = useState(false);
+  const [currentIdEdit, setCurrentIdEdit] = useState(null);
 
   // Del Button
   function deleteList(id) {
@@ -15,16 +17,18 @@ function ListBoxLab4_2Component({ header, list, setList, arrayButton }) {
   function editList(id) {
     const filter = list.filter(item => item.id === id);
     setTextToEdit(filter[0].list);
+    setEditStatus(true);
+    setCurrentIdEdit(id);
 
-    // Hide And Show Element
-    const h2 = document.getElementById(`h2-${id}`);
-    h2.style.display = "none";
-    const input = document.getElementById(`input-${id}`);
-    input.style.display = "";
-    const btn_save = document.getElementById(`btn-save-${id}`);
-    btn_save.style.display = "";
-    const btn_edit = document.getElementById(`btn-edit-${id}`);
-    btn_edit.style.display = "none";
+    // // Hide And Show Element ไม่ควรทำ
+    // const h2 = document.getElementById(`h2-${id}`);
+    // h2.style.display = "none";
+    // const input = document.getElementById(`input-${id}`);
+    // input.style.display = "";
+    // const btn_save = document.getElementById(`btn-save-${id}`);
+    // btn_save.style.display = "";
+    // const btn_edit = document.getElementById(`btn-edit-${id}`);
+    // btn_edit.style.display = "none";
   }
 
   // Save Button
@@ -48,16 +52,17 @@ function ListBoxLab4_2Component({ header, list, setList, arrayButton }) {
       setList(cloneToUpdate);
     }
     setTextToEdit("");
+    setEditStatus(false);
 
-    // Hide And Show Element
-    const h2 = document.getElementById(`h2-${id}`);
-    h2.style.display = "";
-    const input = document.getElementById(`input-${id}`);
-    input.style.display = "none";
-    const btn_save = document.getElementById(`btn-save-${id}`);
-    btn_save.style.display = "none";
-    const btn_edit = document.getElementById(`btn-edit-${id}`);
-    btn_edit.style.display = "";
+    // // Hide And Show Element ไม่ควรทำ
+    // const h2 = document.getElementById(`h2-${id}`);
+    // h2.style.display = "";
+    // const input = document.getElementById(`input-${id}`);
+    // input.style.display = "none";
+    // const btn_save = document.getElementById(`btn-save-${id}`);
+    // btn_save.style.display = "none";
+    // const btn_edit = document.getElementById(`btn-edit-${id}`);
+    // btn_edit.style.display = "";
   }
 
   function clickChangeList(status, id, toList) {
@@ -92,35 +97,39 @@ function ListBoxLab4_2Component({ header, list, setList, arrayButton }) {
           return (
             <div key={`lis-row-${item.id}`} className="list-row">
               <div className="list-text">
-                <h2 id={`h2-${item.id}`} style={{ display: "" }}>
-                  {item.list}
-                </h2>
-                <input
-                  type="text"
-                  id={`input-${item.id}`}
-                  value={textToEdit}
-                  onChange={e => setTextToEdit(e.target.value)}
-                  style={{ display: "none" }}
-                />
+                {!(editStatus && currentIdEdit === item.id) ? (
+                  <h2 id={`h2-${item.id}`} style={{ display: "" }}>
+                    {item.list}
+                  </h2>
+                ) : (
+                  <input
+                    type="text"
+                    id={`input-${item.id}`}
+                    value={textToEdit}
+                    onChange={e => setTextToEdit(e.target.value)}
+                  />
+                )}
                 <p>Date : {item.date}</p>
               </div>
               <div className="button">
-                <button
-                  className="btn btn-save"
-                  id={`btn-save-${item.id}`}
-                  onClick={() => saveEditList(item.id)}
-                  style={{ display: "none" }}
-                >
-                  Save
-                </button>
-                <button
-                  className="btn btn-edit"
-                  id={`btn-edit-${item.id}`}
-                  onClick={() => editList(item.id)}
-                  style={{ display: "" }}
-                >
-                  Edit
-                </button>
+                {editStatus && currentIdEdit === item.id ? (
+                  <button
+                    className="btn btn-save"
+                    id={`btn-save-${item.id}`}
+                    onClick={() => saveEditList(item.id)}
+                  >
+                    Save
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-edit"
+                    id={`btn-edit-${item.id}`}
+                    onClick={() => editList(item.id)}
+                    style={{ display: "" }}
+                  >
+                    Edit
+                  </button>
+                )}
                 <button
                   className="btn btn-del"
                   onClick={() => deleteList(item.id)}
