@@ -1,0 +1,32 @@
+.tic-tac-toe-page {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tic-tac-toe-page table {
+  width: 20vw;
+  height: 20vw;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.tic-tac-toe-page th,
+.tic-tac-toe-page td {
+  border: 1px solid black;
+}
+
+.tic-tac-toe-page button {
+  border: none;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  font-size: 60px;
+}
+
+.tic-tac-toe-page td {
+  width: 33%;
+  height: 33%;
+}

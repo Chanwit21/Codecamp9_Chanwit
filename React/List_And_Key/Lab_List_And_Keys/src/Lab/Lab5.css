@@ -13,6 +13,7 @@
 
 .lab5 ul {
   margin: 0 auto;
+  margin-top: 53px;
   width: 40%;
 }
 
@@ -33,4 +34,10 @@
 
 .lab5 .search_box {
   margin-top: 20px;
+}
+
+.lab5 .text_filter_box {
+  position: absolute;
+  margin: 15px auto;
+  width: inherit;
 }

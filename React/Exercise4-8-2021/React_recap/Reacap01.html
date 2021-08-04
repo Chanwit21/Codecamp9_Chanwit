@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      let d = new Date();
+
+      function MyDiv(props) {
+        console.log(props);
+        return (
+          <div
+            className="mydiv"
+            style={{ color: props.color, fontSize: props.fontSize }}
+          >
+            <h1>Hello, world!</h1>
+            <p>Time : {d.toLocaleTimeString()} </p>
+            <p>Your Lucky Number is {Math.floor(Math.random() * 99) + 0}</p>
+            <img src={`https://picsum.photos/${props.imgWidth}`} alt="random" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
+              dolor.
+            </p>
+          </div>
+        );
+      }
+
+      function App() {
+        return (
+          <div>
+            <MyDiv color="red" fontSize="15px" imgWidth="100" />
+            <MyDiv color="blue" fontSize="20px" imgWidth="250" />
+            <MyDiv color="green" fontSize="30px" imgWidth="200" />
+            <MyDiv color="purple" fontSize="10px" imgWidth="50" />
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

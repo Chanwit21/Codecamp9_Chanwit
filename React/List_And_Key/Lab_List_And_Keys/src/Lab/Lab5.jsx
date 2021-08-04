@@ -5,10 +5,11 @@ function Lab5() {
   const [addText, handleInputAdd] = useState("");
   const [list, setList] = useState([]);
   const [listFilter, setListFilter] = useState([]);
-  const [searchText, setsearchText] = useState("");
+  const [searchText, setSearchText] = useState("");
   const [editStatus, setEditStatus] = useState(false);
   const [idEdit, setIdEdit] = useState(-1);
   const [textToEdit, handleInputEdit] = useState("");
+  const [textTofilterList, setTextTofilterList] = useState("");
 
   function runId(list) {
     if (list.length !== 0) return list[list.length - 1].id + 1;
@@ -17,7 +18,7 @@ function Lab5() {
 
   function handleButtonAdd(e) {
     setList([...list, { text: addText, id: runId(list) }]);
-    if (searchText) {
+    if (textTofilterList) {
       setListFilter([
         ...listFilter,
         searchText === addText ? { text: addText, id: runId(list) } : null,
@@ -25,35 +26,53 @@ function Lab5() {
     } else {
       setListFilter([...list, { text: addText, id: runId(list) }]);
     }
-    setsearchText("");
+    setSearchText("");
     handleInputAdd("");
   }
 
   function handleButtonDelete(id) {
     const listUpdate = list.filter(item => item.id !== id);
     setList(listUpdate);
-    if (searchText) {
-      setListFilter(listUpdate.filter(item => item.text.includes(searchText)));
+    if (textTofilterList) {
+      setListFilter(
+        listUpdate.filter(item => item.text.includes(textTofilterList))
+      );
     } else {
       setListFilter(listUpdate);
     }
   }
 
   function handleButtonEdit(index, id) {
-    const initialText = list[index].text;
+    const initArr = list.filter(item => item.id === id);
+    const initialText = initArr[0].text;
     handleInputEdit(initialText);
     setEditStatus(true);
     setIdEdit(id);
   }
 
   function handleButtonSave(index, id) {
-    const newList = [...list];
-    newList[index].text = textToEdit;
+    const newList = list.filter(item => item.id !== id);
+    const newListUpdate = list.filter(item => item.id === id);
+    newListUpdate[0].text = textToEdit;
+    let indexSearch = newList.findIndex(item => item.id === id - 1);
+    let secoundSearch = false;
+    if (indexSearch === -1 && id !== 0) {
+      indexSearch = newList.findIndex(item => item.id === id + 1);
+      secoundSearch = true;
+    }
+    if (secoundSearch) {
+      newList.splice(indexSearch, 0, newListUpdate[0]);
+    } else {
+      newList.splice(indexSearch + 1, 0, newListUpdate[0]);
+    }
+    console.log(newList);
     setList(newList);
     setEditStatus(false);
     setIdEdit(-1);
-    if (searchText) {
-      setListFilter(newList.filter(item => item.text.includes(searchText)));
+    if (textTofilterList) {
+      setListFilter(
+        newList.filter(item => item.text.includes(textTofilterList))
+      );
     } else {
       setListFilter(newList);
     }
@@ -65,12 +84,12 @@ function Lab5() {
   }
 
   function handleInputSearch(e) {
-    setsearchText(e.target.value);
-    if (e.target.value) {
-      setListFilter(list.filter(item => item.text.includes(e.target.value)));
-    } else {
-      setListFilter(list);
-    }
+    setSearchText(e.target.value);
+    // if (e.target.value) {
+    //   setListFilter(list.filter(item => item.text.includes(e.target.value)));
+    // } else {
+    //   setListFilter(list);
+    // }
   }
 
   function hadleButtonSearchList(e) {
@@ -79,7 +98,14 @@ function Lab5() {
     } else {
       setListFilter(list);
     }
+    setTextTofilterList(searchText);
+    setSearchText("");
   }
+
+  const hadleButtonClearFilter = () => {
+    setTextTofilterList("");
+    setListFilter(list);
+  };
 
   return (
     <div className="lab5">
@@ -104,10 +130,18 @@ function Lab5() {
           Search
         </button>
       </div>
+      {textTofilterList ? (
+        <div className="text_filter_box">
+          <span>{textTofilterList}</span>
+          <button className="btn btn-clear" onClick={hadleButtonClearFilter}>
+            Clear
+          </button>
+        </div>
+      ) : null}
       <ul style={{ listStyleType: "none" }}>
         {listFilter.map((val, index) => {
           return (
-            <li>
+            <li key={`id-${val.id}`}>
               {editStatus && idEdit === val.id ? (
                 <input
                   type="text"

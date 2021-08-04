@@ -1,0 +1,29 @@
+.Counter {
+  text-align: center;
+  width: 20%;
+  margin: 30px auto;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+.Counter input {
+  margin-bottom: 20px;
+}
+
+.Counter button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.Counter button:hover {
+  opacity: 1;
+}
