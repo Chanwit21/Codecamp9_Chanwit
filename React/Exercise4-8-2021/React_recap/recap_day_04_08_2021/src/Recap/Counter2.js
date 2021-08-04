@@ -15,19 +15,16 @@ function Counter2() {
 
   function sumCountValue(array) {
     let result = 0;
-    for (let { id, count } of array) {
-      result += count;
+    for (let item of array) {
+      result += item.count;
     }
     return result;
   }
 
   const hdlResetButton = id => {
     const newCountArray = [...countArray];
-    const newCountArrayUpdate = countArray.filter(item => item.id === id);
-
-    newCountArrayUpdate[0].count = 0;
     const IndexOfInsert = countArray.indexOf(item => item.id === id);
-    newCountArray[IndexOfInsert] = newCountArrayUpdate[0];
+    newCountArray[IndexOfInsert].count = 0;
     setCountArray(newCountArray);
     // setStep("");
     setSumCount(sumCountValue(newCountArray));
@@ -35,27 +32,29 @@ function Counter2() {
 
   const hdlDecreaseButton = id => {
     const newCountArray = [...countArray];
-    const newCountArrayUpdate = countArray.filter(item => item.id === id);
-    if (newCountArrayUpdate[0].count - +step > 0) {
-      newCountArrayUpdate[0].count -= +step;
+    // const newCountArrayUpdate = countArray.filter(item => item.id === id);
+    const IndexOfInsert = newCountArray.findIndex(item => item.id === id);
+    // newCountArray[IndexOfInsert] = newCountArrayUpdate[0];
+    if (newCountArray[IndexOfInsert].count - +step > 0) {
+      newCountArray[IndexOfInsert].count -= +step;
+      // newCountArrayUpdate[0].count -= +step;
     } else {
-      newCountArrayUpdate[0].count = 0;
+      newCountArray[IndexOfInsert].count = 0;
     }
-    const IndexOfInsert = countArray.indexOf(item => item.id === id);
-    newCountArray[IndexOfInsert] = newCountArrayUpdate[0];
     setCountArray(newCountArray);
     setSumCount(sumCountValue(newCountArray));
   };
 
   const hdlIncreaseButton = id => {
     const newCountArray = [...countArray];
-    const newCountArrayUpdate = newCountArray.filter(item => item.id === id);
-    newCountArrayUpdate[0].count += +step;
-    // console.log(newCountArrayUpdate);
-    const IndexOfInsert = countArray.findIndex(item => {
+    // const newCountArrayUpdate = newCountArray.filter(item => item.id === id);
+    const IndexOfInsert = newCountArray.findIndex(item => {
       return item.id === id;
     });
-    newCountArray[IndexOfInsert] = newCountArrayUpdate[0];
+    // console.log(IndexOfInsert);
+    newCountArray[IndexOfInsert].count += +step;
+    // newCountArrayUpdate[0].count += +step;
+    // console.log(newCountArrayUpdate);
     setCountArray(newCountArray);
     setSumCount(sumCountValue(newCountArray));
   };
@@ -74,6 +73,7 @@ function Counter2() {
       {countArray.map(item => {
         return (
           <CounterComponent
+            key={`id-${item.id}`}
             count={item.count}
             hdlIncreaseButton={hdlIncreaseButton}
             hdlDecreaseButton={hdlDecreaseButton}

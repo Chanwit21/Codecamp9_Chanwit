@@ -14,16 +14,3 @@
   font-size: 25px;
   margin-left: 30px;
 }
-
-.counter_page .counter_box {
-  border: 1px solid black;
-  width: 60%;
-  margin: 20px auto;
-  text-align: center;
-  padding: 30px;
-}
-
-.counter_page .counter_box h1 {
-  margin: 0;
-  margin-bottom: 20px;
-}

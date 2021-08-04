@@ -1,13 +1,10 @@
 import React from "react";
 import "./CounterComponent.css";
 
-function CounterComponent({
-  count,
-  hdlDecreaseButton,
-  hdlResetButton,
-  hdlIncreaseButton,
-  id,
-}) {
+function CounterComponent(props) {
+  // console.log(props);
+  const { count, hdlDecreaseButton, hdlResetButton, hdlIncreaseButton, id } =
+    props;
   return (
     <div className="CounterComponent">
       <h3>Counter : {count}</h3>

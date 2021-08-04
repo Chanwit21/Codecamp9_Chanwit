@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CounterComponent from "../Component/CounterComponent";
 import "./Exercise1.css";
 
 function Exercise1() {
@@ -14,8 +15,8 @@ function Exercise1() {
 
   function sumCounter(list) {
     let result = 0;
-    for (let { id, counter } of list) {
-      result += counter;
+    for (let item of list) {
+      result += item.counter;
     }
     return result;
   }
@@ -42,66 +43,89 @@ function Exercise1() {
     setCountAmount(countCounterAmount(newCounterList));
   };
 
-  const handleButtonIncrease = (index, id) => {
-    const newCounterList = counterList.filter(item => item.id !== id);
-    const newCounterListUpdate = counterList.filter(item => item.id === id);
-    newCounterListUpdate[0].counter += 1;
-    let indexSearch = newCounterList.findIndex(item => item.id === id - 1);
-    // console.log(indexSearch);
-    let secoundSearch = false;
-    if (indexSearch === -1 && index !== 0) {
-      indexSearch = newCounterList.findIndex(item => item.id === id + 1);
-      secoundSearch = true;
-    }
-    if (secoundSearch) {
-      newCounterList.splice(indexSearch, 0, newCounterListUpdate[0]);
-    } else {
-      newCounterList.splice(indexSearch + 1, 0, newCounterListUpdate[0]);
-    }
+  const handleButtonIncrease = id => {
+    const newCounterList = [...counterList];
+    let indexSearch = newCounterList.findIndex(item => item.id === id);
+    newCounterList[indexSearch].counter += 1;
     setCounterList(newCounterList);
     setCounterSum(sumCounter(newCounterList));
+
+    // วิธียาว
+    // const newCounterList = counterList.filter(item => item.id !== id);
+    // const newCounterListUpdate = counterList.filter(item => item.id === id);
+    // newCounterListUpdate[0].counter += 1;
+    // let indexSearch = newCounterList.findIndex(item => item.id === id - 1);
+    // // console.log(indexSearch);
+    // let secoundSearch = false;
+    // if (indexSearch === -1 && index !== 0) {
+    //   indexSearch = newCounterList.findIndex(item => item.id === id + 1);
+    //   secoundSearch = true;
+    // }
+    // if (secoundSearch) {
+    //   newCounterList.splice(indexSearch, 0, newCounterListUpdate[0]);
+    // } else {
+    //   newCounterList.splice(indexSearch + 1, 0, newCounterListUpdate[0]);
+    // }
+    // setCounterList(newCounterList);
+    // setCounterSum(sumCounter(newCounterList));
   };
 
-  const handleButtonDecrease = (index, id) => {
-    const newCounterList = counterList.filter(item => item.id !== id);
-    const newCounterListUpdate = counterList.filter(item => item.id === id);
-    if (newCounterListUpdate[0].counter > 0) {
-      newCounterListUpdate[0].counter -= 1;
-    }
-    let indexSearch = newCounterList.findIndex(item => item.id === id - 1);
-    // console.log(indexSearch);
-    let secoundSearch = false;
-    if (indexSearch === -1 && index !== 0) {
-      indexSearch = newCounterList.findIndex(item => item.id === id + 1);
-      secoundSearch = true;
-    }
-    if (secoundSearch) {
-      newCounterList.splice(indexSearch, 0, newCounterListUpdate[0]);
-    } else {
-      newCounterList.splice(indexSearch + 1, 0, newCounterListUpdate[0]);
+  const handleButtonDecrease = id => {
+    const newCounterList = [...counterList];
+    let indexSearch = newCounterList.findIndex(item => item.id === id);
+    if (newCounterList[indexSearch].counter > 0) {
+      newCounterList[indexSearch].counter -= 1;
     }
     setCounterList(newCounterList);
     setCounterSum(sumCounter(newCounterList));
+
+    // วิธียาว
+    // const newCounterList = counterList.filter(item => item.id !== id);
+    // const newCounterListUpdate = counterList.filter(item => item.id === id);
+    // if (newCounterListUpdate[0].counter > 0) {
+    //   newCounterListUpdate[0].counter -= 1;
+    // }
+    // let indexSearch = newCounterList.findIndex(item => item.id === id - 1);
+    // // console.log(indexSearch);
+    // let secoundSearch = false;
+    // if (indexSearch === -1 && index !== 0) {
+    //   indexSearch = newCounterList.findIndex(item => item.id === id + 1);
+    //   secoundSearch = true;
+    // }
+    // if (secoundSearch) {
+    //   newCounterList.splice(indexSearch, 0, newCounterListUpdate[0]);
+    // } else {
+    //   newCounterList.splice(indexSearch + 1, 0, newCounterListUpdate[0]);
+    // }
+    // setCounterList(newCounterList);
+    // setCounterSum(sumCounter(newCounterList));
   };
 
-  const handleButtonReset = (index, id) => {
-    const newCounterList = counterList.filter(item => item.id !== id);
-    const newCounterListUpdate = counterList.filter(item => item.id === id);
-    newCounterListUpdate[0].counter = 0;
-    let indexSearch = newCounterList.findIndex(item => item.id === id - 1);
-    // console.log(indexSearch);
-    let secoundSearch = false;
-    if (indexSearch === -1 && index !== 0) {
-      indexSearch = newCounterList.findIndex(item => item.id === id + 1);
-      secoundSearch = true;
-    }
-    if (secoundSearch) {
-      newCounterList.splice(indexSearch, 0, newCounterListUpdate[0]);
-    } else {
-      newCounterList.splice(indexSearch + 1, 0, newCounterListUpdate[0]);
-    }
+  const handleButtonReset = id => {
+    const newCounterList = [...counterList];
+    let indexSearch = newCounterList.findIndex(item => item.id === id);
+    newCounterList[indexSearch].counter = 0;
     setCounterList(newCounterList);
     setCounterSum(sumCounter(newCounterList));
+
+    // วิธียาว
+    // const newCounterList = counterList.filter(item => item.id !== id);
+    // const newCounterListUpdate = counterList.filter(item => item.id === id);
+    // newCounterListUpdate[0].counter = 0;
+    // let indexSearch = newCounterList.findIndex(item => item.id === id - 1);
+    // // console.log(indexSearch);
+    // let secoundSearch = false;
+    // if (indexSearch === -1 && index !== 0) {
+    //   indexSearch = newCounterList.findIndex(item => item.id === id + 1);
+    //   secoundSearch = true;
+    // }
+    // if (secoundSearch) {
+    //   newCounterList.splice(indexSearch, 0, newCounterListUpdate[0]);
+    // } else {
+    //   newCounterList.splice(indexSearch + 1, 0, newCounterListUpdate[0]);
+    // }
+    // setCounterList(newCounterList);
+    // setCounterSum(sumCounter(newCounterList));
   };
 
   return (
@@ -116,34 +140,15 @@ function Exercise1() {
         <h2>Counter Amount : {counterAmount}</h2>
         {counterList.map((item, index) => {
           return (
-            <div className="counter_box">
-              <h1>
-                Count : {item.counter} (id = {item.id})
-              </h1>
-              <button
-                className="btn btn-increase"
-                onClick={() => handleButtonIncrease(index, item.id)}
-              >
-                +
-              </button>
-              <button
-                className="btn btn-decrease"
-                onClick={() => handleButtonDecrease(index, item.id)}
-              >
-                -
-              </button>
-              <button
-                className="btn btn-reset"
-                onClick={() => handleButtonReset(index, item.id)}
-              >
-                reset
-              </button>
-              <button
-                className="btn btn-delete"
-                onClick={() => handleButtonDelete(item.id)}
-              >
-                Delete
-              </button>
+            <div key={`id-${item.id}`}>
+              <CounterComponent
+                id={item.id}
+                counter={item.counter}
+                handleButtonIncrease={handleButtonIncrease}
+                handleButtonDecrease={handleButtonDecrease}
+                handleButtonReset={handleButtonReset}
+                handleButtonDelete={handleButtonDelete}
+              />
             </div>
           );
         })}
