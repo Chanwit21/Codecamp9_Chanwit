@@ -37,7 +37,7 @@ function Lab2() {
       <ul style={{ width: "50%", margin: "0 auto" }}>
         {posts.map(item => (
           <li
-            key={`id-${item.id}`}
+            key={item.id}
           >{`id is ${item.id},message is ${item.message}, date is ${item.date},author is ${item.author}, time is ${item.time}`}</li>
         ))}
       </ul>

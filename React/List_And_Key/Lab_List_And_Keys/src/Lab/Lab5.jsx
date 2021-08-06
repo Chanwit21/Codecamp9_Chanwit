@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import "./Lab5.css";
 
 function Lab5() {
+  const TESTLIST = [
+    { text: "Work out", id: 1 },
+    { text: "Creat To Do List", id: 2 },
+    { text: "Play Football", id: 3 },
+    { text: "Play Game", id: 4 },
+  ];
   const [addText, handleInputAdd] = useState("");
-  const [list, setList] = useState([]);
-  const [listFilter, setListFilter] = useState([]);
+  const [list, setList] = useState(TESTLIST);
+  const [listFilter, setListFilter] = useState(TESTLIST);
   const [searchText, setSearchText] = useState("");
   const [editStatus, setEditStatus] = useState(false);
   const [idEdit, setIdEdit] = useState(-1);
@@ -35,7 +41,9 @@ function Lab5() {
     setList(listUpdate);
     if (textTofilterList) {
       setListFilter(
-        listUpdate.filter(item => item.text.includes(textTofilterList))
+        listUpdate.filter(item =>
+          item.text.toLowerCase().includes(textTofilterList.toLowerCase())
+        )
       );
     } else {
       setListFilter(listUpdate);
@@ -51,27 +59,32 @@ function Lab5() {
   }
 
   function handleButtonSave(index, id) {
-    const newList = list.filter(item => item.id !== id);
-    const newListUpdate = list.filter(item => item.id === id);
-    newListUpdate[0].text = textToEdit;
-    let indexSearch = newList.findIndex(item => item.id === id - 1);
-    let secoundSearch = false;
-    if (indexSearch === -1 && id !== 0) {
-      indexSearch = newList.findIndex(item => item.id === id + 1);
-      secoundSearch = true;
-    }
-    if (secoundSearch) {
-      newList.splice(indexSearch, 0, newListUpdate[0]);
-    } else {
-      newList.splice(indexSearch + 1, 0, newListUpdate[0]);
-    }
+    const newList = [...list];
+    const indexToUpdate = newList.findIndex(item => item.id === id);
+    newList[indexToUpdate].text = textToEdit;
+    // const newList = list.filter(item => item.id !== id);
+    // const newListUpdate = list.filter(item => item.id === id);
+    // newListUpdate[0].text = textToEdit;
+    // let indexSearch = newList.findIndex(item => item.id === id - 1);
+    // let secoundSearch = false;
+    // if (indexSearch === -1 && id !== 0) {
+    //   indexSearch = newList.findIndex(item => item.id === id + 1);
+    //   secoundSearch = true;
+    // }
+    // if (secoundSearch) {
+    //   newList.splice(indexSearch, 0, newListUpdate[0]);
+    // } else {
+    //   newList.splice(indexSearch + 1, 0, newListUpdate[0]);
+    // }
     console.log(newList);
     setList(newList);
     setEditStatus(false);
     setIdEdit(-1);
     if (textTofilterList) {
       setListFilter(
-        newList.filter(item => item.text.includes(textTofilterList))
+        newList.filter(item =>
+          item.text.toLowerCase().includes(textTofilterList.toLowerCase())
+        )
       );
     } else {
       setListFilter(newList);
@@ -94,7 +107,11 @@ function Lab5() {
 
   function hadleButtonSearchList(e) {
     if (searchText) {
-      setListFilter(list.filter(item => item.text.includes(searchText)));
+      setListFilter(
+        list.filter(item =>
+          item.text.toLowerCase().includes(searchText.toLowerCase())
+        )
+      );
     } else {
       setListFilter(list);
     }
@@ -141,7 +158,7 @@ function Lab5() {
       <ul style={{ listStyleType: "none" }}>
         {listFilter.map((val, index) => {
           return (
-            <li key={`id-${val.id}`}>
+            <li key={val.id}>
               {editStatus && idEdit === val.id ? (
                 <input
                   type="text"

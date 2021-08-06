@@ -22,13 +22,6 @@ function SolutionCounterByPJeang() {
       <CounterComponentPJeang sum={sum} setSum={setSum} step={step} />
       <CounterComponentPJeang sum={sum} setSum={setSum} step={step} />
       <CounterComponentPJeang sum={sum} setSum={setSum} step={step} />
-      {/* <CounterComponent
-            count=""
-            hdlIncreaseButton=""
-            hdlDecreaseButton=""
-            hdlResetButton=""
-            id=""
-          /> */}
     </div>
   );
 }

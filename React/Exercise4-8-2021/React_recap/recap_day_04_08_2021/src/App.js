@@ -11,8 +11,8 @@ function App() {
       {/* <Counter /> */}
       {/* <RecapEventCounter /> */}
       {/* <Counter2 /> */}
-      {/* <SolutionCounterByPJeang /> */}
-      <InputEvent />
+      <SolutionCounterByPJeang />
+      {/* <InputEvent /> */}
     </div>
   );
 }

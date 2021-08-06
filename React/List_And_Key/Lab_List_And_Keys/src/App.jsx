@@ -8,8 +8,6 @@ import Lab4 from "./Lab/Lab4";
 import Lab5 from "./Lab/Lab5";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div>
       {/* <Lab1 /> */}

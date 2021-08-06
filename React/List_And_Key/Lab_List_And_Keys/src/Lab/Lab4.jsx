@@ -2,8 +2,14 @@ import React, { useState } from "react";
 import "./Lab4.css";
 
 function Lab4() {
+  const TESTLIST = [
+    { text: "Work out", id: 1 },
+    { text: "Creat To Do List", id: 2 },
+    { text: "Play Football", id: 3 },
+    { text: "Play Game", id: 4 },
+  ];
   const [text, setText] = useState("");
-  const [list, setList] = useState([]);
+  const [list, setList] = useState([...TESTLIST]);
   const [editStatus, setEditStatus] = useState(false);
   const [idEdit, setIdEdit] = useState(-1);
   const [textToEdit, setTextToEdit] = useState("");
@@ -13,32 +19,35 @@ function Lab4() {
     return 1;
   }
 
-  function addList(e) {
+  function handleButtonAddList(e) {
     setList([...list, { text: text, id: runId(list) }]);
     setText("");
   }
 
-  function deleteList(index) {
-    const listUpdate = list.filter(item => item !== list[index]);
+  function handleButtonDeleteList(id) {
+    const listUpdate = list.filter(item => item.id !== id);
     setList(listUpdate);
   }
 
-  function editList(index, id) {
-    const initialText = list[index].text;
+  function handleButtonEditList(id) {
+    const newList = [...list];
+    const indexToEdit = newList.findIndex(item => item.id === id);
+    const initialText = newList[indexToEdit].text;
     setTextToEdit(initialText);
     setEditStatus(true);
     setIdEdit(id);
   }
 
-  function saveEditList(index, id) {
+  function handleButtonSaveEditList(id) {
     const newList = [...list];
-    newList[index].text = textToEdit;
+    const indexToEdit = newList.findIndex(item => item.id === id);
+    newList[indexToEdit].text = textToEdit;
     setList(newList);
     setEditStatus(false);
     setIdEdit(-1);
   }
 
-  function toggleText(e) {
+  function handleClickToggleText(e) {
     const oldClassName = e.target.className;
     e.target.className = oldClassName ? "" : "toggle";
     // const element = document.getElementById(`id-${id}`);
@@ -54,13 +63,13 @@ function Lab4() {
         value={text}
         onChange={e => setText(e.target.value)}
       />
-      <button className="btn btn-add" onClick={addList}>
+      <button className="btn btn-add" onClick={handleButtonAddList}>
         Add
       </button>
       <ul style={{ listStyleType: "none" }}>
         {list.map((val, index) => {
           return (
-            <li>
+            <li style={{ userSelect: "none" }} key={val.id}>
               {editStatus && idEdit === val.id ? (
                 <input
                   type="text"
@@ -71,7 +80,7 @@ function Lab4() {
               ) : (
                 <span
                   id={`id-${val.id}`}
-                  onClick={e => toggleText(e)}
+                  onClick={e => handleClickToggleText(e)}
                   className=""
                 >
                   {val.text}
@@ -81,14 +90,14 @@ function Lab4() {
                 {editStatus && idEdit === val.id ? (
                   <button
                     className="btn btn-save"
-                    onClick={() => saveEditList(index, val.id)}
+                    onClick={() => handleButtonSaveEditList(val.id)}
                   >
                     Save
                   </button>
                 ) : (
                   <button
                     className="btn btn-edit"
-                    onClick={() => editList(index, val.id)}
+                    onClick={() => handleButtonEditList(val.id)}
                   >
                     Edit
                   </button>
@@ -96,7 +105,7 @@ function Lab4() {
 
                 <button
                   className="btn btn-del"
-                  onClick={() => deleteList(index)}
+                  onClick={() => handleButtonDeleteList(val.id)}
                 >
                   Del
                 </button>

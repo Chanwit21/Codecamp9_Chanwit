@@ -14,8 +14,11 @@ function Lab4_2() {
   const arrayButton = ["To Do", "Doing", "Done"];
 
   function checkAndCreateID(task) {
-    const lastId = task[task.length - 1].id;
-    return lastId + 1;
+    if (task.length !== 0) {
+      const lastId = task[task.length - 1].id;
+      return lastId + 1;
+    }
+    return 1;
   }
 
   function addTodoList() {

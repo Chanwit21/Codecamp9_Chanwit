@@ -5,8 +5,8 @@ function Lab1() {
   return (
     <div style={{ paddingTop: "50px", textAlign: "center" }}>
       <ul style={{ width: "50%", margin: "0 auto" }}>
-        {friends.map(item => (
-          <li key={`id-${item}`}>{item}</li>
+        {friends.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </div>

@@ -35,7 +35,7 @@ function Lab3() {
     <div className="Lab3">
       {posts.map(item => {
         return (
-          <div className="box_of_post" key={`id-${item.id}`}>
+          <div className="box_of_post" key={item.id}>
             <div className="message">
               <h1>{item.message}</h1>
             </div>
