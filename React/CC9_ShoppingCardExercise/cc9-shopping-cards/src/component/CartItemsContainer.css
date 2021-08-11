@@ -1,0 +1,8 @@
+.CartItemsContainer {
+  width: 30%;
+  background-color: burlywood;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: brown;
+}

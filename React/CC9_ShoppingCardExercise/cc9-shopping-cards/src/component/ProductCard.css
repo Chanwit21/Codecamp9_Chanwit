@@ -1,0 +1,43 @@
+.ProductCard {
+  /* display: inline-block; */
+  /* margin-right: 2%; */
+  margin-bottom: 2.5%;
+  /* border: 1px dashed black; */
+  width: 23%;
+  color: brown;
+}
+
+.ProductCard .card-content {
+  width: 90%;
+  margin: 0.5rem auto;
+  object-fit: cover;
+}
+
+.ProductCard .card-content * {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.ProductCard .card-content img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ProductCard .card-content h1 {
+  font-size: 1.5rem;
+}
+
+.ProductCard .card-content p {
+  font-size: 1.3rem;
+}
+
+.ProductCard .card-content button {
+  font-size: 1.3rem;
+  color: brown;
+  background-color: gold;
+  border: none;
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.2rem;
+}

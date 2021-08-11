@@ -1,0 +1,15 @@
+.SummarizeCartContainer {
+  width: 100%;
+}
+
+.SummarizeCartContainer * {
+  margin: 0;
+  padding: 0;
+}
+
+.SummarizeCartContainer .row {
+  display: flex;
+  margin: 1rem;
+  justify-content: space-between;
+  color: brown;
+}

@@ -1,0 +1,20 @@
+.ProductContainer {
+  background-color: burlywood;
+  margin-top: 2rem;
+  width: 67%;
+  /* height: 700px; */
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.ProductContainer h1 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: brown;
+}
+
+.ProductContainer .list-product-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

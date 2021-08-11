@@ -1,0 +1,35 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  background-color: burlywood;
+  color: brown;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.Header .count-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+}
+
+.Header .count-cart p {
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.Header .count-cart p:nth-child(2) {
+  padding: 0.2rem 0;
+  margin: 0.3rem;
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+  background-color: gold;
+  border-radius: 2rem;
+}
