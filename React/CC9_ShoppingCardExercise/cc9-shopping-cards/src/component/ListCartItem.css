@@ -11,14 +11,14 @@
   /* border: 1px dashed black; */
   justify-content: space-between;
   align-items: center;
-  width: 60%;
+  width: 65%;
 }
 
 .ListCartItem .sumprice-group .btn-group {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
+  width: 45%;
 }
 
 .ListCartItem .sumprice-group .btn-group span:nth-child(3) {

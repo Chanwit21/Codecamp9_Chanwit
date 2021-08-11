@@ -9,13 +9,24 @@ function App() {
   // const [shoppingLists, setShoppingLists] = useState(SHOPPING_LISTS);
   const [cartLists, setCartLists] = useState(CARTLISTS);
 
-  const addCart = (id) => {
-    const productToAdd = [...SHOPPING_LISTS][
-      SHOPPING_LISTS.findIndex((item) => item.id === id)
-    ];
-    productToAdd.quantity = 1;
-    const newCartLists = [productToAdd, ...cartLists];
-    setCartLists(newCartLists);
+  const addCart = (productList) => {
+    const clone = { ...productList };
+    const productToAdd = {
+      id: clone.id,
+      name: clone.name,
+      price: clone.price,
+    };
+    // ใช้หาว่ามีอยู่ใน CartList หรือยัง
+    const idx = cartLists.findIndex((item) => item.id === clone.id);
+    if (idx === -1) {
+      productToAdd.quantity = 1;
+      const newCartLists = [productToAdd, ...cartLists];
+      setCartLists(newCartLists);
+    } else {
+      const newCartLists = [...cartLists];
+      newCartLists[idx].quantity += 1;
+      setCartLists(newCartLists);
+    }
   };
 
   const increaseQuantityProduct = (id) => {
@@ -36,6 +47,12 @@ function App() {
     setCartLists(newCartList);
   };
 
+  const deleteCartItem = (id) => {
+    // console.log(id);
+    const newCartList = cartLists.filter((item) => item.id !== id);
+    setCartLists(newCartList);
+  };
+
   const countCart = ((cartLists) => {
     return cartLists.length;
   })(cartLists);
@@ -49,6 +66,7 @@ function App() {
           cartLists={cartLists}
           increaseQuantityProduct={increaseQuantityProduct}
           decreaseQuantityProduct={decreaseQuantityProduct}
+          deleteCartItem={deleteCartItem}
         />
       </section>
     </div>

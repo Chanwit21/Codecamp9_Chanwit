@@ -5,17 +5,17 @@ import { formatUSD } from "../service/formatPrice";
 function SummarizeCartContainer(props) {
   const { cartLists } = props;
 
-  const itemPrice = ((cartLists) => {
-    let result = 0;
-    for (let { quantity, price } of cartLists) {
-      result += quantity * price;
-    }
-    return result;
-  })(cartLists);
+  const itemPrice = cartLists.reduce(
+    (accumulator, currentvalue) =>
+      accumulator + currentvalue.price * currentvalue.quantity,
+    0
+  );
 
   const tax = itemPrice * 0.07;
 
-  const totalPrice = itemPrice + tax;
+  const shipping = itemPrice === 0 ? 0 : itemPrice > 3000 ? 0 : 50;
+
+  const totalPrice = itemPrice + tax + shipping;
 
   return (
     <div className="SummarizeCartContainer">
@@ -29,7 +29,7 @@ function SummarizeCartContainer(props) {
       </div>
       <div className="row">
         <p>Shipping</p>
-        <p>{formatUSD(0)}</p>
+        <p>{formatUSD(shipping)}</p>
       </div>
       <div className="row">
         <p>

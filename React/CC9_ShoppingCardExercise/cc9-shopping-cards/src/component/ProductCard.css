@@ -5,6 +5,9 @@
   /* border: 1px dashed black; */
   width: 23%;
   color: brown;
+  border: 1px solid #0003;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 3px 2px gray;
 }
 
 .ProductCard .card-content {

@@ -3,7 +3,12 @@ import ListCartItem from "./ListCartItem.jsx";
 import "./ListsCartItemBox.css";
 
 function ListsCartItemBox(props) {
-  const { cartLists, increaseQuantityProduct, decreaseQuantityProduct } = props;
+  const {
+    cartLists,
+    increaseQuantityProduct,
+    decreaseQuantityProduct,
+    deleteCartItem,
+  } = props;
 
   const listsCartItem = cartLists.map(
     (
@@ -14,6 +19,7 @@ function ListsCartItemBox(props) {
         cartlist={cartlist}
         increaseQuantityProduct={increaseQuantityProduct}
         decreaseQuantityProduct={decreaseQuantityProduct}
+        deleteCartItem={deleteCartItem}
       />
     )
   );

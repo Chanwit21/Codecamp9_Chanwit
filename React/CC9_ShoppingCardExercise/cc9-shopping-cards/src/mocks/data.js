@@ -50,12 +50,12 @@ const SHOPPING_LISTS = [
     image: "http://picsum.photos/id/360/800",
   },
 ];
+
 const CARTLISTS = [
   {
     id: uuidv4(),
     name: "Glen Carrie",
     price: 100,
-    image: "http://picsum.photos/id/429/800",
     quantity: 1,
   },
 ];

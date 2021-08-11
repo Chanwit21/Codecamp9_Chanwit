@@ -1,9 +1,15 @@
 import React from "react";
 import "./ListCartItem.css";
 import { formatUSD } from "../service/formatPrice";
+import { BsFillTrashFill } from "react-icons/bs";
 
 function ListCartItem(props) {
-  const { cartlist, increaseQuantityProduct, decreaseQuantityProduct } = props;
+  const {
+    cartlist,
+    increaseQuantityProduct,
+    decreaseQuantityProduct,
+    deleteCartItem,
+  } = props;
   const { name, price, quantity, id } = cartlist;
 
   const handleClickIncrease = (id) => {
@@ -34,6 +40,13 @@ function ListCartItem(props) {
         </div>
         <div className="row-rigth">
           <span>{formatUSD(price)}</span>
+        </div>
+        <div>
+          <button
+            style={{ background: "inherit", border: "none" }}
+            onClick={() => deleteCartItem(id)}>
+            <BsFillTrashFill />
+          </button>
         </div>
       </div>
     </div>
