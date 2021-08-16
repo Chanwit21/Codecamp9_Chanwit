@@ -1,0 +1,9 @@
+{
+  "users": [
+    { "email": "bom.suthi@gmail.com", "password": "123456", "point": 1 },
+    { "email": "chanwit.p@gmail.com", "password": "4564", "point": 2 },
+    { "email": "Bon.suchart@gmail.com", "password": "4515656", "point": 3 },
+    { "email": "Boy.Patthadon@gmail.com", "password": "7846", "point": 4 },
+    { "email": "Boom.Sugrit@gmail.com", "password": "45156", "point": 5 }
+  ]
+}
