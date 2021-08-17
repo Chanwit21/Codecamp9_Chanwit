@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1346,
+      "name": "Testo",
+      "price": 20
+    },
+    {
+      "id": 5121,
+      "name": "Connea",
+      "price": 10
+    },
+    {
+      "id": 8740,
+      "name": "Milk",
+      "price": 15
+    }
+  ]
+}

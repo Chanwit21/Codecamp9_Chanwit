@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1545,
+      "email": "bom.suthi@gmail.com",
+      "password": "df861gvfd",
+      "point": 100
+    },
+    {
+      "id": 5679,
+      "email": "chanwit.p@gmail.com",
+      "password": "dgd7d25f",
+      "point": 50
+    },
+    {
+      "id": 6585,
+      "email": "Bon.suchart@gmail.com",
+      "password": "dtwe435d4",
+      "point": 60
+    },
+    {
+      "id": 4518,
+      "email": "Boy.Patthadon@gmail.com",
+      "password": "dfs645",
+      "point": 70
+    },
+    {
+      "id": 8502,
+      "email": "Boom.Sugrit@gmail.com",
+      "password": "sdgfrtf4sd",
+      "point": 80
+    }
+  ],
+  "total": 5
+}
