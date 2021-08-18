@@ -36,12 +36,12 @@ const { v4: uuidv4 } = require('uuid');
 fs.readFile('user.json', 'utf-8', (err, data) => {
   if (err) return console.log(err);
   const user = JSON.parse(data).users;
-  const targetUser = user.find((item) => item.id === 5679);
+  const targetUser = user.find(item => item.id === 5679);
   console.log(targetUser);
   fs.readFile('product.json', 'utf-8', (err, data) => {
     if (err) return console.log(err);
     const product = JSON.parse(data).products;
-    const targetProduct = product.find((item) => item.id === 1346);
+    const targetProduct = product.find(item => item.id === 1346);
     console.log(targetProduct);
     const newData = {
       transactions: [
@@ -54,14 +54,9 @@ fs.readFile('user.json', 'utf-8', (err, data) => {
         },
       ],
     };
-    fs.writeFile(
-      'transactions.json',
-      JSON.stringify(newData),
-      'utf-8',
-      (err) => {
-        if (err) console.log(err);
-      }
-    );
+    fs.writeFile('transactions.json', JSON.stringify(newData), 'utf-8', err => {
+      if (err) console.log(err);
+    });
   });
 });
 
