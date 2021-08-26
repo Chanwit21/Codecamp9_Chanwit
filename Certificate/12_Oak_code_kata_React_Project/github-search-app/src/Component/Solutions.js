@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Profile() {
+function Solutions() {
   return <div></div>;
 }
 
-export default Profile;
+export default Solutions;
