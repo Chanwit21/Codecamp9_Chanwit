@@ -1,20 +1,33 @@
 import React, { useState } from 'react';
 
 function SearchBar(props) {
-  const { searchUsers } = props;
+  const { searchUsers, setData } = props;
   const [input, setInput] = useState('');
 
-  const handleClickSearch = () => {};
+  const handleSubmitForm = e => {
+    e.preventDefault();
+    if (input) {
+      searchUsers(input);
+    } else {
+      setData([]);
+    }
+  };
 
   return (
-    <div>
-      <input
-        type="text"
-        value={input}
-        onChange={e => setInput(e.target.value)}
-      />
-      <button onClick={() => searchUsers(input)}>Search</button>
-    </div>
+    <form onSubmit={handleSubmitForm}>
+      <div className="input-group mb-3">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Type username here"
+          value={input}
+          onChange={e => setInput(e.target.value)}
+        />
+        <button className="btn btn-warning" type="submit" id="button-addon2">
+          Search
+        </button>
+      </div>
+    </form>
   );
 }
 
