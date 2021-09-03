@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  background-color: #f4f5f6;
+}
+
+.header-bottom li a {
+  color: #0008;
+  font-weight: 600;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 1rem auto;
+  border-left: 1px solid #0003;
+}
+
+.header-bottom .row1 li a {
+  color: #000;
+  font-weight: 600;
+}
+
+.header-bottom li a:hover {
+  color: #000;
+}
+
+hr {
+  color: #0006;
+}
