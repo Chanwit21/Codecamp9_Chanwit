@@ -1,0 +1,20 @@
+[
+  {
+    "id": "def807c6-3eeb-4693-82c1-2f69bf7a9a29",
+    "list": "Lunch",
+    "completed": false,
+    "dueDate": "2021-08-11T00:00:00.000Z"
+  },
+  {
+    "id": "620c4378-20e2-49c7-9fec-2f7137031284",
+    "list": "Breakfast",
+    "completed": false,
+    "dueDate": "2021-08-11T00:00:00.000Z"
+  },
+  {
+    "id": "3b27f849-2886-49bb-87ac-647fa232e998",
+    "list": "Workout",
+    "dueDate": "2021-08-11T00:00:00.000Z",
+    "completed": false
+  }
+]
