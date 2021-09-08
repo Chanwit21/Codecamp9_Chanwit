@@ -8,7 +8,7 @@
   {
     "id": "620c4378-20e2-49c7-9fec-2f7137031284",
     "list": "Breakfast",
-    "completed": false,
+    "completed": true,
     "dueDate": "2021-08-11T00:00:00.000Z"
   },
   {
@@ -16,5 +16,11 @@
     "list": "Workout",
     "dueDate": "2021-08-11T00:00:00.000Z",
     "completed": false
+  },
+  {
+    "id": "29613da6-70e3-4ec5-aa9f-4d93688d8616",
+    "list": "Exercise",
+    "completed": true,
+    "dueDate": "2021-08-11T00:00:00.000Z"
   }
 ]
