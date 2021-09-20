@@ -83,14 +83,17 @@ const updateTodo = async (req, res, next) => {
 };
 
 const deleteTodo = async (req, res, next) => {
-  const targetId = req.params.id;
-  const todo = await execute('SELECT * FROM `lists` WHERE id = ?', [targetId]);
-  if (todo.length === 0) {
-    res.status(400).json({ message: 'Id is invalid' });
-  } else {
-    const result = await execute('DELETE FROM `lists` WHERE id=?', [targetId]);
-    // console.log(result);
-    res.status(204).json();
+  try{
+    const targetId = req.params.id;
+      const result = await execute('DELETE FROM `lists` WHERE id=?', [targetId]);
+      // console.log(result);
+      if (result.affectedRows === 0) {
+          res.status(400).json({ message: 'cannot delete todo with this id' });
+        }else{
+          res.status(204).json();
+        }
+  } catch (err){
+    next(err)
   }
 };
 
