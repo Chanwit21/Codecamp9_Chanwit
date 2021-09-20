@@ -1,0 +1,49 @@
+USE learn_db_bank;
+
+SELECT * FROM `individual` WHERE `FIRST_NAME` LIKE "_%";
+
+-- SELECT  COUNT *  คือจะนับทุกแถวเลย แต่ถ้า SELECT COUNTตามชื่อ COLUM จะไม่นับตัวที่เป็น NULL ไปด้วย
+SELECT COUNT(`AVAil_BALANCE`) FROM `account` WHERE `AVAIL_BALANCE` BETWEEN 2000 AND 4000;
+SELECT COUNT(`CLOSE_DATE`) FROM `account`;
+SELECT COUNT(`FIRST_NAME`) AS count FROM `individual` WHERE `FIRST_NAME` LIKE "J%";
+
+SELECT SUM(DISTINCT `AVAIL_BALANCE`) FROM `account`;
+
+SELECT SUM(`AVAIL_BALANCE` * `CUST_ID` - `PENDING_BALANCE` *0.2) FROM `account`;
+
+SELECT`AVAIL_BALANCE` * `CUST_ID` FROM `account`;
+
+SELECT AVG(`AVAIL_BALANCE`) FROM `account` WHERE `CUST_ID` = 1;
+
+SELECT AVG(`AVAIL_BALANCE`) FROM `account` WHERE `OPEN_BRANCH_ID` = 4 AND `OPEN_EMP_ID` = 16;
+
+SELECT MAX(`AVAIL_BALANCE`) FROM `account` ;
+SELECT MIN(`AVAIL_BALANCE` * `CUST_ID`) FROM `account` ;
+
+SELECT `CUST_ID`,SUM(`AVAIL_BALANCE`),COUNT(*) FROM `account` GROUP BY `CUST_ID`;
+
+SELECT `OPEN_BRANCH_ID`,COUNT(*),SUM(`AVAIL_BALANCE`) AS sum FROM `account` WHERE `AVAIL_BALANCE` > 2000 GROUP BY `OPEN_BRANCH_ID` ORDER BY sum DESC;
+
+SELECT `CUST_ID`,`OPEN_BRANCH_ID`,COUNT(*) FROM `account` GROUP BY `CUST_ID`,`OPEN_BRANCH_ID`;
+
+SELECT `CUST_ID`,SUM(`AVAIL_BALANCE`) AS sum  
+FROM `account` GROUP BY `CUST_ID` 
+HAVING sum > 5000;
+
+SELECT `CUST_ID`,COUNT(*) AS count ,SUM(`AVAIL_BALANCE`) AS sum 
+FROM `account` GROUP BY `CUST_ID` 
+HAVING sum < 10000 AND count <= 2;
+
+
+SELECT employee.`EMP_ID`,employee.`FIRST_NAME`,department.`NAME` FROM employee INNER JOIN department ON employee.DEPT_ID = department.DEPT_ID;
+
+SELECT e.`EMP_ID`,e.`FIRST_NAME`,d.`NAME`,d.DEPT_ID FROM employee AS e INNER JOIN department AS d ON e.DEPT_ID = d.DEPT_ID WHERE d.NAME = "operations" AND e.`FIRST_NAME` LIKE "S%";
+
+SELECT d.DEPT_ID ,d.NAME,e.EMP_ID,e.FIRST_NAME FROM department d JOIN employee e ON d.DEPT_ID = e.DEPT_ID;
+
+SELECT d.DEPT_ID ,d.NAME,e.EMP_ID,e.FIRST_NAME FROM department d LEFT JOIN employee e ON d.DEPT_ID = e.DEPT_ID;
+
+SELECT a.ACCOUNT_ID ,e.EMP_ID,e.FIRST_NAME FROM account a RIGHT JOIN employee e ON a.OPEN_EMP_ID = e.EMP_ID; 
+
+SELECT * FROM employee,department;
+SELECT * FROM employee e CROSS JOIN department d;
