@@ -1,0 +1,576 @@
+const workoutSchedule = [
+  {
+    day: 'Day7',
+    ExercisePostureWorkoutSchedules: [
+      {
+        id: '2a752843-8fbe-4d3b-ba02-c7a810d2fc1e',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '44921e45-7f78-41e3-864a-b6cffa960419',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '450b9fcb-7a0c-48e3-b9d0-5854fec7a29b',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '6d79cec1-5b3f-48f2-b3e9-eec7ed5657db',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '8378ceb5-57d3-4c5a-8ea9-bb2d3891b03f',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'ca140572-71b6-4113-af15-d49345988868',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'daa7a11c-3977-45ca-a47f-3b4ea143a654',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+    ],
+  },
+  {
+    day: 'Day1',
+    ExercisePostureWorkoutSchedules: [
+      {
+        id: '3c5444a7-0dd9-489d-9045-3a1e6089673b',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '51945edc-106d-4bf6-8f9d-9f685de31140',
+        ExercisePosture: {
+          id: '1d2f6fe7-4192-4256-8503-3ecfe38e6e85',
+          name: 'Five',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Chest',
+        },
+      },
+      {
+        id: '55ad9321-85fd-4576-b79e-5e91b71e563d',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '55eb4da6-3d8e-4788-a85a-4ae5cabe9794',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '6cc10ba6-77de-4dce-a448-c1ce4effecf6',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'abd5f616-8bd9-4c06-888e-305c9a7b1ec2',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'ddc68c51-4867-453e-bf3d-3756de8e8c68',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+    ],
+  },
+  {
+    day: 'Day5',
+    ExercisePostureWorkoutSchedules: [
+      {
+        id: '748ee523-bf44-492b-b1fd-ab70b55e64de',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '753461a7-1fff-4218-b34f-4cb60d434626',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '7a4e810b-40af-45b4-9cc7-8799e4a24cb7',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '9503a1fb-c3a0-44a9-952a-622ffa7b9de2',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '9b9654fc-0c71-4709-b57d-e4e4bb82b3f1',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'dfa6bd34-7dfd-42bf-991a-d27ab121cf06',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'fe0c0085-a5b8-4140-b7cf-1d2c346650f3',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+    ],
+  },
+  {
+    day: 'Day4',
+    ExercisePostureWorkoutSchedules: [
+      {
+        id: '1894dcca-dfec-4054-ae33-9761cc139088',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '469445e4-5edd-46d4-a472-47d90da84921',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '7363226b-ab4f-4a1b-816c-396ee4627511',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '78b4c82e-633a-4200-896a-48874e7c3306',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '8d008e5e-58b3-4744-abf5-8dccfd1689fb',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'b5986842-b049-4223-83c2-35fb0d1b1ea7',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'dfaa67de-f721-4bb5-bf31-31edada687ce',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+    ],
+  },
+  {
+    day: 'Day6',
+    ExercisePostureWorkoutSchedules: [
+      {
+        id: '2e3d1f8e-4746-4626-b6bc-413d3a359494',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '390bc145-4aad-43ec-8f3f-0dca6c5fc096',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '61f9b4df-3876-4de1-9f17-73742c13e2ae',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '8f900f95-dd31-4dc6-8599-a2eff30d7733',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '9b8e42cd-8a3a-4db2-af3a-a7d4ef3bbda5',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'd32eae1a-be6c-415a-b5a7-8ad1d0616142',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'eff2d641-2cd6-40ed-924c-d7a32af75481',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+    ],
+  },
+  {
+    day: 'Day2',
+    ExercisePostureWorkoutSchedules: [
+      {
+        id: '09f171f3-782e-4f37-8fbc-9d78218ff871',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '128ea88f-311d-4f5f-9295-52e62b169099',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '2d69f0d8-b1b7-4c23-ba4a-8a850d39cd7f',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '533a19f6-76ae-47e9-9a3e-9390f4465347',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: '9e45c203-50d9-473d-8dc2-a350c455de5c',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'd90cb59c-583f-4e7f-96e5-3c885aa66cd6',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'daffc2ab-d8ef-499a-ae46-76e2fc83d7ee',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+    ],
+  },
+  {
+    day: 'Day3',
+    ExercisePostureWorkoutSchedules: [
+      {
+        id: '463b2a25-db4d-46a5-8441-bf0d2a5aafd4',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'b4ac26dd-94ad-4a5c-a6e0-3ab1215ec6f1',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'bb8cca38-97cd-43ce-b6a1-2b284970675c',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'cd1f1d69-898e-40d5-b754-a143e67e8726',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'ce91d740-bf15-4b0f-89b4-722c75eff6d2',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'd4c2a95e-3eec-4ba5-aa3d-6e90ac765186',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+      {
+        id: 'e64e7f43-9789-4791-b2ea-f8e6fb2d16db',
+        ExercisePosture: {
+          id: '3718a5f2-8cdb-4d80-8517-e119068fb8a1',
+          name: 'Four',
+          fontColor: '#000000',
+          backgroundColor: '#FFFFFF',
+          link: '',
+          type: 'Full Body',
+        },
+      },
+    ],
+  },
+];

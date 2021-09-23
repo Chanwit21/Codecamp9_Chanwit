@@ -1,18 +1,18 @@
 {
-  "name": "healthy_at_home_test_db",
+  "name": "sequelize-cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "mysql2": "^2.3.0",
-    "sequelize": "^6.6.5",
-    "uuid": "^8.3.2"
+    "sequelize": "^6.6.5"
   }
 }

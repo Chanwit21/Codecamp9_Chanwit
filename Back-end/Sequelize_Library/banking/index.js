@@ -153,17 +153,17 @@ const run = async () => {
   // });
 
   // //Transfer
-  // const result = await Transfer.findAll({
-  //   include: [
-  //     { model: Account, as: 'ToAccount', attributes: ['id', 'balance'] },
-  //     { model: Account, as: 'FromAccount', attributes: ['id', 'balance'] },
-  //   ],
-  // });
-  // console.log(JSON.stringify(result, null, 2));
+  const result = await Transfer.findAll({
+    include: [
+      { model: Account, as: 'ToAccount', attributes: ['id', 'balance'] },
+      { model: Account, as: 'FromAccount', attributes: ['id', 'balance'] },
+    ],
+  });
+  console.log(JSON.stringify(result, null, 2));
 
-  const sql =
-    'SELECT c.first_name AS firstName,SUM(a.balance) AS total FROM accounts a LEFT JOIN customers c ON a.customer_id = c.id GROUP BY c.id';
-  const arrResult = await sequelize.query(sql, { type: QueryTypes.SELECT });
-  console.log(JSON.stringify(arrResult, null, 2));
+  // const sql =
+  //   'SELECT c.first_name AS firstName,SUM(a.balance) AS total FROM accounts a LEFT JOIN customers c ON a.customer_id = c.id GROUP BY c.id';
+  // const arrResult = await sequelize.query(sql, { type: QueryTypes.SELECT });
+  // console.log(JSON.stringify(arrResult, null, 2));
 };
 run();

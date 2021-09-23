@@ -47,6 +47,9 @@ const User = sequelize.define(
     },
     phoneNumber: {
       type: DataTypes.STRING,
+      validate: {
+        len: [10, 10],
+      },
     },
     gender: {
       type: DataTypes.ENUM('MALE', 'FEMALE'),
@@ -90,6 +93,10 @@ const CourseService = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    day: {
+      type: DataTypes.DECIMAL(2, 0),
+      allowNull: false,
+    },
   },
   {
     tableName: 'course_services',
@@ -100,6 +107,12 @@ const CourseService = sequelize.define(
 const UserTrainerWorkoutScheduleFoodSchedule = sequelize.define(
   'UserTrainerWorkoutScheduleFoodSchedule',
   {
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: Sequelize.UUIDV4,
+      primaryKey: true,
+      allowNull: false,
+    },
     loseWeightBefore: {
       type: DataTypes.ENUM('intermediate-fasting', 'keto-diet', 'mediterranean-diet', 'atkins-diet', 'Paleo'),
     },
@@ -141,6 +154,10 @@ const ExercisePostureWorkoutSchedule = sequelize.define(
       type: DataTypes.UUID,
       defaultValue: Sequelize.UUIDV4,
       primaryKey: true,
+      allowNull: false,
+    },
+    col: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
@@ -187,6 +204,118 @@ const ExercisePosture = sequelize.define(
     underscored: true,
   }
 );
+
+//as ใช้กรณี self Join
+// ยังไม่เสร็จเรียนก่อน
+User.hasMany(UserTrainerWorkoutScheduleFoodSchedule, {
+  as: 'TrainTos',
+  foreignKey: {
+    name: 'userId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+UserTrainerWorkoutScheduleFoodSchedule.belongsTo(User, {
+  as: 'ToUser',
+  foreignKey: {
+    name: 'userId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+// ความสัมพันธ์แบบ TransferOut
+User.hasMany(UserTrainerWorkoutScheduleFoodSchedule, {
+  as: 'TrainFroms',
+  foreignKey: {
+    name: 'trainerId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+UserTrainerWorkoutScheduleFoodSchedule.belongsTo(User, {
+  as: 'FromUser',
+  foreignKey: {
+    name: 'trainerId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+
+// Relation between UserTrainerWorkoutScheduleFoodSchedule and CourseService
+CourseService.hasMany(UserTrainerWorkoutScheduleFoodSchedule, {
+  foreignKey: {
+    name: 'courseServiceId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+UserTrainerWorkoutScheduleFoodSchedule.belongsTo(CourseService, {
+  foreignKey: {
+    name: 'courseServiceId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+
+//Relation between WorkoutSchedule and UserTrainerWorkoutScheduleFoodSchedule
+UserTrainerWorkoutScheduleFoodSchedule.hasMany(WorkoutSchedule, {
+  foreignKey: {
+    name: 'userTrainerWorkoutScheduleFoodScheduleId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+WorkoutSchedule.belongsTo(UserTrainerWorkoutScheduleFoodSchedule, {
+  foreignKey: {
+    name: 'userTrainerWorkoutScheduleFoodScheduleId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+
+//Relation Between exercise_posture_workout_schedule and WorkoutSchedule
+WorkoutSchedule.hasMany(ExercisePostureWorkoutSchedule, {
+  foreignKey: {
+    name: 'workoutScheduleId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+ExercisePostureWorkoutSchedule.belongsTo(WorkoutSchedule, {
+  foreignKey: {
+    name: 'workoutScheduleId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+
+//Relation between ExercisePostureWorkoutSchedule and ExercisePosture
+ExercisePosture.hasMany(ExercisePostureWorkoutSchedule, {
+  foreignKey: {
+    name: 'exercisePostureId',
+    allowNull: false,
+  },
+  onUpdate: 'RESTRICT',
+  onDelete: 'RESTRICT',
+});
+ExercisePostureWorkoutSchedule.belongsTo(ExercisePosture, {
+  foreignKey: {
+    name: 'exercisePostureId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
 
 // sequelize.sync({ force: true });
 
