@@ -2,4 +2,5 @@
 *.xlsx
 *.docx
 *.txt
+SonarQube*
 node_modules*

@@ -7,6 +7,7 @@ const {
   WorkoutSchedule,
   ExercisePostureWorkoutSchedule,
   ExercisePosture,
+  FoodSchedule,
 } = require('./db');
 
 const genArrayToCreateWorkoutSchedule = (num, id) => {
@@ -46,6 +47,7 @@ const run = async () => {
   //   image: null,
   //   education: null,
   // });
+
   //   //get user
   // const result = await User.findAll();
   // Create Course
@@ -57,6 +59,7 @@ const run = async () => {
   //   title: 'Suitable for people who want to change their shape in a short time.',
   //   day: 45,
   // });
+
   //Create When Registered Course
   //  ถ้า add ไม่ได้เกิดจาก id ไม่ตรง
   // const result = await UserTrainerWorkoutScheduleFoodSchedule.create({
@@ -77,6 +80,7 @@ const run = async () => {
   // const result = await WorkoutSchedule.findAll({
   //   order: ['day'],
   // });
+
   //Create Exercise Poseture
   // const result = await ExercisePosture.bulkCreate([
   //   { name: 'One', link: '', type: 'Arm' },
@@ -338,14 +342,14 @@ const run = async () => {
   //     workoutScheduleId: '1958a9d8-b8db-4f8a-9324-8c5a17d1c00c',
   //   },
   // ]);
+
   //Get workout schedule
   const result = await WorkoutSchedule.findAll({
-    order: ['day'],
+    order: ['day', [ExercisePostureWorkoutSchedule, 'col']],
     attributes: ['day'],
     where: { userTrainerWorkoutScheduleFoodScheduleId: '94141d02-7261-4a7f-8672-4e9af9d8ed3d' },
     include: {
       model: ExercisePostureWorkoutSchedule,
-      order: ['col'],
       attributes: ['id', 'col'],
       include: {
         model: ExercisePosture,
@@ -353,6 +357,62 @@ const run = async () => {
       },
     },
   });
+
+  // const arrResult1 = result
+  //   .map((item) => {
+  //     const { day, ExercisePostureWorkoutSchedules } = item;
+  //     return {
+  //       day: day,
+  //       exercises: ExercisePostureWorkoutSchedules.map((item1) => {
+  //         const {
+  //           col,
+  //           ExercisePosture: { name, fontColor, backgroundColor, link, type },
+  //         } = item1;
+  //         return { col, exerciseName: name, fontColor, backgroundColor, link, type };
+  //       }).sort((a, b) => {
+  //         if (a.col.slice(3) > b.col.slice(3)) return 1;
+  //         return -1;
+  //       }),
+  //     };
+  //   })
+  //   .sort((a, b) => {
+  //     console.log(b.day.slice(3));
+  //     if (a.day.slice(3) > b.day.slice(3)) return 1;
+  //     return -1;
+  //   });
+
+  // console.log(JSON.stringify(arrResult1, null, 2));
+
+  //Craete Foodschedule
+  // const result = await FoodSchedule.bulkCreate([
+  //   {
+  //     userTrainerWorkoutScheduleFoodScheduleId: '94141d02-7261-4a7f-8672-4e9af9d8ed3d',
+  //     day: 'Day1',
+  //     breakfast: 'Choose 1 protein menu + 1 carbohydrate menu.',
+  //     brunch: 'Choose one good fat SNACK.',
+  //     lunch: 'Choose 1 protein menu + 1 carbohydrate menu.',
+  //     afternoon: 'Choose SNACK 1 fruit.',
+  //     diner: 'Choose 2 protein menu + 1 carbohydrate menu + lots of vegetables.',
+  //     lastnight: 'Choose 1 protein menu.',
+  //   },
+  //   {
+  //     userTrainerWorkoutScheduleFoodScheduleId: '94141d02-7261-4a7f-8672-4e9af9d8ed3d',
+  //     day: 'Day2',
+  //     breakfast: 'Choose 1 protein menu + 1 carbohydrate menu.',
+  //     brunch: 'Choose one good fat SNACK.',
+  //     lunch: 'Choose 1 protein menu + 1 carbohydrate menu.',
+  //     afternoon: 'Choose SNACK 1 fruit.',
+  //     diner: 'Choose 2 protein menu + 1 carbohydrate menu + lots of vegetables.',
+  //     lastnight: 'Choose 1 protein menu.',
+  //   },
+  // ]);
+
+  //get FoodSchedule by user and trainer id
+  // const result = await FoodSchedule.findAll({
+  //   attributes: { exclude: ['createdAt', 'updatedAt', 'userTrainerWorkoutScheduleFoodScheduleId'] },
+  //   where: { userTrainerWorkoutScheduleFoodScheduleId: '94141d02-7261-4a7f-8672-4e9af9d8ed3d' },
+  // });
+
   console.log(JSON.stringify(result, null, 2));
   // console.log(uuidv4());
   // console.log(JSON.stringify(genArrayToCreateWorkoutSchedule(3, '2bba6c2a-c90b-462e-9207-f1d3cf07c053'), null, 2));

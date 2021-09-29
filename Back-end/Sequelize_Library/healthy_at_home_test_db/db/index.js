@@ -195,7 +195,7 @@ const ExercisePosture = sequelize.define(
       allowNull: false,
     },
     type: {
-      type: DataTypes.ENUM('Full Body', 'Core & Abs', 'Chest', 'Arm', 'Butt'),
+      type: DataTypes.ENUM('Full Body', 'Core & Abs', 'Chest', 'Arm', 'Butt', 'Cardio', 'Rest'),
       allowNull: false,
     },
   },
@@ -203,6 +203,47 @@ const ExercisePosture = sequelize.define(
     tableName: 'exercise_posture',
     underscored: true,
   }
+);
+
+const FoodSchedule = sequelize.define(
+  'FoodSchedule',
+  {
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: Sequelize.UUIDV4,
+      primaryKey: true,
+      allowNull: false,
+    },
+    day: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    breakfast: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    brunch: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    lunch: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    afternoon: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    diner: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    lastnight: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+  },
+  { tableName: 'food_schedules', underscored: true }
 );
 
 //as ใช้กรณี self Join
@@ -317,7 +358,25 @@ ExercisePostureWorkoutSchedule.belongsTo(ExercisePosture, {
   onUpdate: 'RESTRICT',
 });
 
-// sequelize.sync({ force: true });
+// Relation Between UserTrainerWorkoutScheduleFoodSchedule and Foodschedule
+UserTrainerWorkoutScheduleFoodSchedule.hasMany(FoodSchedule, {
+  foreignKey: {
+    name: 'userTrainerWorkoutScheduleFoodScheduleId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+FoodSchedule.belongsTo(UserTrainerWorkoutScheduleFoodSchedule, {
+  foreignKey: {
+    name: 'userTrainerWorkoutScheduleFoodScheduleId',
+    allowNull: false,
+  },
+  onDelete: 'RESTRICT',
+  onUpdate: 'RESTRICT',
+});
+
+// sequelize.sync({ force: false });
 
 module.exports = {
   sequelize,
@@ -327,4 +386,5 @@ module.exports = {
   WorkoutSchedule,
   ExercisePostureWorkoutSchedule,
   ExercisePosture,
+  FoodSchedule,
 };
