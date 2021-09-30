@@ -50,7 +50,7 @@ exports.logIn = async (req, res, next) => {
           email: user.email,
           username: user.username,
         };
-        const token = jwt.sign(payload, SECRETKEY, { expiresIn: 30 * 24 * 60 * 60 });
+        const token = jwt.sign(payload, SECRETKEY, { expiresIn: 24 * 60 * 60 });
         res.status(200).json({ message: 'Success login', token });
       } else {
         res.status(400).json({ message: 'username or password is incorrect' });
@@ -67,12 +67,12 @@ exports.register = async (req, res, next) => {
   try {
     const { username, password, email, confirmPassword } = req.body;
     if (!username || !password || !email) {
-      res.status(400).json({ message: 'email username and password is require' });
+      return res.status(400).json({ message: 'email username and password is require' });
     }
 
     //Check password match confirm password
     if (password !== confirmPassword) {
-      res.status(400).json({ message: 'password and confirm password did not match' });
+      return res.status(400).json({ message: 'password and confirm password did not match' });
     }
 
     const userByUsername = await User.findOne({
@@ -87,27 +87,13 @@ exports.register = async (req, res, next) => {
       },
     });
 
-    if (userByUsername) {
-      res.status(400).json({ message: 'username has alredy registed' });
-    } else if (userByEmail) {
-      res.status(400).json({ message: 'email has alredy registed' });
-    } else {
-      if (!isEmail(email)) {
-        res.status(400).json({ message: 'Email is invalid' });
-      } else if (
-        !isStrongPassword(password, { minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1 })
-      ) {
-        res.status(400).json({ message: 'Password is week' });
-      } else {
-        const hashedPassword = await bcrypt.hash(password, 12);
-        const user = await User.create({
-          username: username,
-          password: hashedPassword,
-          email: email,
-        });
-        res.status(200).json({ user });
-      }
-    }
+    const hashedPassword = await bcrypt.hash(password, 12);
+    const user = await User.create({
+      username: username,
+      password: hashedPassword,
+      email: email,
+    });
+    res.status(200).json({ user });
   } catch (err) {
     next(err);
   }

@@ -26,8 +26,6 @@ exports.createTodo = async (req, res, next) => {
       return res.status(400).json({ message: 'All content is require' });
     } else if (typeof title !== 'string') {
       return res.status(400).json({ message: 'Title must be a string' });
-    } else if (typeof status !== 'boolean') {
-      return res.status(400).json({ message: 'status must be a boolean' });
     }
 
     const todo = await List.create({ title, status, userId: req.user.id });
